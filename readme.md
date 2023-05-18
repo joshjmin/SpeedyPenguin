@@ -6,7 +6,7 @@ This is your notepad for planning your project. It also serves as the landing pa
 
 ### Group members
 
-[replace with names of group members]
+Josh, Dina, Colin, Julia 
 
 ### What it is
 
