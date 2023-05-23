@@ -1,14 +1,21 @@
+MSG = """
+tkinter demo x: mixed 1
+Shows a button that, when clicked, begins a repeated action.
+"""
+
+print(MSG)
+
 import tkinter
+
+# Create an app object to store global variables
+class App:
+    pass
+app = App()
 
 # Set up the window
 window = tkinter.Tk()
 window.title('My very first tkinter GUI')
 window.geometry('400x400')
-
-# A decent way to pass around "global" variables
-class App:
-    pass
-app = App()
 
 # Initialize app variables
 app.objects = {}
@@ -70,7 +77,7 @@ canvas.pack()
 background = canvas.create_rectangle(0, 0, 400, 400, fill='black', outline='black')
 
 # Initialize images
-img_earth = tkinter.PhotoImage(file='src/sawczak_demo/assets/earth.png')
+img_earth = tkinter.PhotoImage(file='sawczak_demo/assets/earth.png')
 
 # Create a button
 start_button = tkinter.Button(window, text='Show Earth', command=show_earth)

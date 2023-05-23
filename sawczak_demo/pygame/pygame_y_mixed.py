@@ -1,4 +1,17 @@
+MSG = """
+pygame demo y: mixed 2
+Shows a scene with repeated actions, updating text, movement,
+and multiple overlaid shapes and images.
+"""
+
+print(MSG)
+
 import pygame
+
+# Create an app object to store global variables
+class App:
+    pass
+app = App()
 
 # Set up the window
 pygame.init()
@@ -8,11 +21,6 @@ window = pygame.display.set_mode([600, 600])
 # Set up text module
 pygame.font.init()
 font = pygame.font.SysFont('Courier New', 14)
-
-# A decent way to pass around "global" variables
-class App:
-    pass
-app = App()
 
 # Initialize app variables
 app.n_days = 0
@@ -75,7 +83,7 @@ def move(event) -> None:
             app.earth_x += 20
 
 # Initialize images
-img_earth = pygame.image.load('src/sawczak_demo/assets/earth.png')
+img_earth = pygame.image.load('sawczak_demo/assets/earth.png')
 
 # Create an instructions label
 instructions_1 = "A day passes every 4 seconds."
@@ -88,13 +96,13 @@ pygame.time.set_timer(app.e_add_day, 4_000)
 pygame.time.set_timer(app.e_toggle_day_night, 2_000)
 
 # Main loop
-app.running = True
-while app.running:
+running = True
+while running:
 
     # Catch all events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            app.running = False
+            running = False
 
         elif event.type == pygame.KEYDOWN:
             move(event)

@@ -1,4 +1,16 @@
+MSG = """
+pygame demo x: mixed 1
+Shows a button that, when clicked, begins a repeated action.
+"""
+
+print(MSG)
+
 import pygame
+
+# Create an app object to store global variables
+class App:
+    pass
+app = App()
 
 # Set up the window
 pygame.init()
@@ -14,10 +26,17 @@ class App:
     pass
 app = App()
 
-# Initialize app variables
+# Set up app variables
 app.clicked = False
 app.movement = 'N'
 app.earth_y = 200
+
+# Set up images
+img_earth = pygame.image.load('sawczak_demo/assets/earth.png')
+
+# Create a button
+btn_start_text = font.render('Show Earth', True, 'black', 'white')
+btn_start_rect = pygame.Rect(130, 150, 200, 50)
 
 # Event IDs
 app.e_move = pygame.USEREVENT + 1
@@ -49,21 +68,18 @@ def move_earth():
         else:
             app.movement = 'N'
 
-# Initialize images
-img_earth = pygame.image.load('src/sawczak_demo/assets/earth.png')
-
-# Create a button
-btn_start_text = font.render('Show Earth', True, 'black', 'white')
-btn_start_rect = pygame.Rect(130, 150, 200, 50)
-
 # Main loop
-app.running = True
-while app.running:
+running = True
+while running:
 
-    # Catch all events
+    # Check events
     for event in pygame.event.get():
+
+        # User clicks window close button
         if event.type == pygame.QUIT:
-            app.running = False
+            running = False
+        
+        # The move event fires
         elif event.type == app.e_move:
             move_earth()
 

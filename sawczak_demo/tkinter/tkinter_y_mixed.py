@@ -1,14 +1,22 @@
+MSG = """
+tkinter demo y: mixed 2
+Shows a scene with repeated actions, updating text, movement,
+and multiple overlaid shapes and images.
+"""
+
+print(MSG)
+
 import tkinter
+
+# Create an app object to store global variables
+class App:
+    pass
+app = App()
 
 # Set up the window
 window = tkinter.Tk()
 window.title('My very first tkinter GUI')
 window.geometry('600x600')
-
-# A decent way to pass around "global" variables
-class App:
-    pass
-app = App()
 
 # Initialize app variables
 app.objects = {}
@@ -93,31 +101,31 @@ def move(event) -> None:
     """
 
     # w = north
-    if event.char == 'w':
+    if event.keysym.lower() in ['w', 'up']:
         if app.earth_y > 0:
             canvas.move(app.objects['earth'], 0, -20)
             app.earth_y -= 20
 
     # s = south
-    elif event.char == 's':
+    elif event.keysym.lower() in ['s', 'down']:
         if app.earth_y < 480:
             canvas.move(app.objects['earth'], 0, 20)
             app.earth_y += 20
 
     # a = west
-    elif event.char == 'a':
+    elif event.keysym.lower() in ['a', 'left']:
         if app.earth_x > 0:
             canvas.move(app.objects['earth'], -20, 0)
             app.earth_x -= 20
 
     # d = east
-    elif event.char == 'd':
+    elif event.keysym.lower() in ['d', 'right']:
         if app.earth_x < 480:
             canvas.move(app.objects['earth'], 20, 0)
             app.earth_x += 20
 
 
-# Initialize the canvas (everything gets drawn on here)
+# Initialize the canvas
 canvas = tkinter.Canvas(window, height=600, width=600)
 canvas.pack()
 
@@ -136,7 +144,7 @@ label_instructions.pack()
 canvas.create_window(300, 80, window=label_instructions)
 
 # Initialize and show images
-img_earth = tkinter.PhotoImage(file='src/sawczak_demo/assets/earth.png')
+img_earth = tkinter.PhotoImage(file='sawczak_demo/assets/earth.png')
 earth = canvas.create_image(app.earth_x, app.earth_y, anchor=tkinter.NW, image=img_earth)
 app.objects['earth'] = earth
 
