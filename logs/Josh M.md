@@ -2,7 +2,7 @@
 * First, copy this and save it with your name. For example: `jacob.md`.
 * EACH PERSON must update THEIR OWN file at the end of each class.
 * Copy and paste the template below, and fill in the data.
-* Then commit & push it.
+* Then commit & push it.gfff
 
 ## TEMPLATE (don't change, just copy and update)
 
