@@ -6,7 +6,7 @@
 
 ## TEMPLATE (don't change, just copy and update)
 
-### Log for 2021-xx-xx
+### Log for 2023-xx-xx 
 
 > **Goals for today:** do X
 
