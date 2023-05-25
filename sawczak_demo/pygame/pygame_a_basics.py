@@ -35,10 +35,7 @@ while running:
             running = False
 
     # Draw shapes
-    pygame.draw.rect(window, 'red', (0, 0, 200, 200))
-    pygame.draw.rect(window, 'green', (200, 0, 400, 200))
-    pygame.draw.rect(window, 'yellow', (200, 200, 400, 400))
-    pygame.draw.rect(window, 'blue', (0, 200, 200, 400))
+    pygame.draw.rect(window, 'red', (20, 50, 100, 100))
 
     # Draw image
     window.blit(img_earth, (250, 50))
