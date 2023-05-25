@@ -19,3 +19,13 @@
 > **Other notes:** delete this line if not needed
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+### Log for 2023-05-25
+
+> **Goals for today:** Lean more basics, finish sample game, learn to jump for in the full game
+
+> **Accomplished:** learned more basics, finished game sample, part way through jumping
+
+> **Plans for next day:** spend more time on jumping
+
+> **Problems/bugs noted:** needed to learn how to add a delay for jumping becase if i dont it will crash every time
