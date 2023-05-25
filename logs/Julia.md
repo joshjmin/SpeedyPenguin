@@ -6,11 +6,11 @@
 
 ## TEMPLATE (don't change, just copy and update)
 
-### Log for 2023-xx-xx 
+### Log for 2023-05-25
 
-> **Goals for today:** do X
+> **Goals for today:** test some dino code 
 
-> **Accomplished:** did X
+> **Accomplished:** x 
 
 > **Plans for next day:** do Y
 
