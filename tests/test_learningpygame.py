@@ -39,19 +39,19 @@ def move(event) -> None:
 
     if event.key in [pygame.K_w, pygame.K_UP]:
         if app.player_y > 25:
-            app.player_y -= (10 + speed_scaling)
+            app.player_y -= (10 + user_speed_scaling)
 
     elif event.key in [pygame.K_s, pygame.K_DOWN]:
         if app.player_y < 375:
-            app.player_y += (10 + speed_scaling)
+            app.player_y += (10 + user_speed_scaling)
 
     elif event.key in [pygame.K_a, pygame.K_LEFT]:
         if app.player_x > 25:
-            app.player_x -= (10 + speed_scaling)
+            app.player_x -= (10 + user_speed_scaling)
 
     elif event.key in [pygame.K_d, pygame.K_RIGHT]:
         if app.player_x < 375:
-            app.player_x += (10 + speed_scaling)
+            app.player_x += (10 + user_speed_scaling)
 
 
 
