@@ -1,36 +1,39 @@
 import pygame
-motion = 'ground'
-jumping = 'standing'
+
+pygame.init()
+window = pygame.display.set_mode((400, 400))
+clock = pygame.time.Clock()
+rect = pygame.Rect(135, 220, 30, 30) 
 class App:
     pass
 app = App()
-pygame.init()
-pygame.display.set_caption('jumping test')
-window = pygame.display.set_mode([400,400])
 
-app.px = 50
-app.py = 350
+app.x = 50
+app.y = 350
+vel = 5
 
-pygame.key.set_repeat(33)
-
-def move(event):
-    if event.key in [pygame.K_w]:
-        while app.py > 50:
-            app.py -= 0.001
-            pygame.draw.circle(window ,'green' , (app.px , app.py) , 20 )
-            pygame.display.flip()
-        
-        
-running = True
-while running:
+run = True
+while run:
+    clock.tick(100)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+            run = False
 
-        elif event.type == pygame.KEYDOWN:
-            move(event)
-        
-    pygame.draw.rect(window, 'gray', (0, 0, 400, 400))
-    pygame.draw.circle(window ,'green' , (app.px , app.py) , 20 )
+    keys = pygame.key.get_pressed()    
+    
+    
+    if keys[pygame.K_SPACE]:
+        if app.y < 50:
+            pass
+        else:
+            app.y -= 10
+    elif app.y < 350:
+        app.y += 10
+
+    window.fill((0, 0, 64))
+    pygame.draw.rect(window, (64, 64, 64), (0, 250, 300, 100))
+    pygame.draw.circle(window, (255, 0, 0), (app.x,app.y), 15)
     pygame.display.flip()
-pygame.quit
+
+pygame.quit()
+exit() 

@@ -17,9 +17,9 @@ while run:
     rect.centerx = (rect.centerx + (keys[pygame.K_RIGHT] - keys[pygame.K_LEFT]) * vel) % 300
     
     if keys[pygame.K_SPACE]:
-        rect.y -= 1
+        rect.y -= 10
     elif rect.y < 220:
-        rect.y += 1
+        rect.y += 10
 
     window.fill((0, 0, 64))
     pygame.draw.rect(window, (64, 64, 64), (0, 250, 300, 100))
