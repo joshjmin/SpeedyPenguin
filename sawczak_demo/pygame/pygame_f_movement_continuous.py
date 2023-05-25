@@ -27,7 +27,7 @@ app.direction = ''
 
 # Set up FPS
 app.fps = 30
-app.fps_delay = 1_000 // 30
+app.fps_delay = 1_000 // app.fps
 fps_clock = pygame.time.Clock()
 
 # Allow repeated keypressing every N milliseconds
