@@ -3,7 +3,7 @@ import pygame
 pygame.init()
 window = pygame.display.set_mode((300, 300))
 clock = pygame.time.Clock()
-rect = pygame.Rect(135, 220, 30, 30) 
+rect = pygame.Rect(135, 220, 30, 30)  
 vel = 5
 
 run = True
