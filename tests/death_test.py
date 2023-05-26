@@ -17,13 +17,13 @@ time = 0
 run = True
 safe = True
 
-from sawczak_demo import image 
+# from sawczak_demo import image 
 
 
-image = Image.open('sawczak_demo.penguin.png')
+# image = Image.open('sawczak_demo.penguin.png')
 
-new_image = image.resize((500, 500))
-new_image.save('myimage_500.jpg')
+# new_image = image.resize((500, 500))
+# new_image.save('myimage_500.jpg')
 
 while run:
     clock.tick(120)
