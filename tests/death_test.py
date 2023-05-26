@@ -30,17 +30,27 @@ while run:
     if app.projx < 0:
         app.projx = 450
     
+    if app.y < 350:
+        air += 0.05
+    if app.y == 350:
+        air = 0
+    print(air)
+    
     if keys[pygame.K_SPACE]:
         if app.y < 50:
             pass
         elif time <= 30:
-            app.y -= 4
+            app.y -= 5 - air
             time += 1
             print(time)
         elif app.y < 350: 
-            app.y += 2
+            app.y += 3 + air
     elif app.y < 350:
-        app.y += 2
+        app.y += 3 + air
+    
+    if app.y > 350:
+        app.y = 350
+
     if app.y  == 350:
         if time > 0:
             time -= 1
@@ -56,7 +66,7 @@ while run:
     pygame.draw.rect(window, 'gray' , (0,365,400,400))
 
     #jump meater
-    pygame.draw.rect(window , 'gray' , (0,0, 200 , 40))
+    pygame.draw.rect(window , 'gray' , (0,0, 105 , 40))
     if time <= 30:
         pygame.draw.rect(window , 'red' , (5,5,5,30))
     if time <= 27:
