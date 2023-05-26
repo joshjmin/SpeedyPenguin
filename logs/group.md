@@ -7,7 +7,7 @@
 
 ### Meeting of 2023-xx-xx
 
-> **Present:** 
+> **Present:** Josh, Colin, Dina, Julia
 
 > **Project status:** Got x to work, still trying to manage y
 
@@ -18,4 +18,16 @@
 > **Other notes:** delete this line if not needed
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+### Meeting of 2023-05-25
+
+> **Present:** Everyone
+
+> **Project status:** Decided on the basic game and the required ideas and maechanisms
+
+> **New items/bug reports:** started design for animations, and code will crash when attempting to fix the jump mechanism
+
+> **Plans for next scrum:** continue to dissect and find solutions for jumping and other mechanisms
+
+
 
