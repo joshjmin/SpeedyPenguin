@@ -68,7 +68,7 @@ while run:
             print(time)
     if app.x - app.projx < 25 and app.x - app.projx > -25 and app.y - app.projy < 25 and app.y - app.projy > -25:
         break
-
+ 
     window.fill((0, 0, 64))
     window.blit(penguin , (app.x - 100 , app.y - 100))
     pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
