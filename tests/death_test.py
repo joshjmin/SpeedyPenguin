@@ -1,5 +1,6 @@
 import pygame
 
+
 pygame.init()
 window = pygame.display.set_mode((400, 400))
 clock = pygame.time.Clock()
@@ -8,7 +9,7 @@ class App:
     pass
 app = App()
 
-player = pygame.image.load('sawczak_demo/assets/penguin.png')
+air = 0
 app.x = 50
 app.y = 350
 app.barx = 50
@@ -29,6 +30,8 @@ while run:
     keys = pygame.key.get_pressed()    
     app.projx -= 2
     #make a timebar
+    if app.projx < 0:
+        app.projx = 450
     
     if keys[pygame.K_SPACE]:
         if app.y < 50:
