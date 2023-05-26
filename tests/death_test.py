@@ -26,6 +26,7 @@ safe = True
 #new_image.save('myimage_500.jpg')
 
 penguin = pygame.image.load('sawczak_demo/assets/penguin.png')
+penguin = pygame.transform.scale(penguin , (50,100 ))
 # new_image = image.resize((500, 500))
 # new_image.save('myimage_500.jpg')
 
@@ -42,7 +43,7 @@ while run:
         app.projx = 450
     
     if app.y < 350:
-        air += 0.05
+        air += 0.07
     if app.y == 350:
         air = 0
     print(air)
@@ -70,13 +71,13 @@ while run:
         break
  
     window.fill((0, 0, 64))
-    window.blit(penguin , (app.x - 100 , app.y - 100))
+    window.blit(penguin , (app.x - 20  , app.y - 75))
     pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
     pygame.draw.rect(window, 'gray', (0, 365, 400, 400))
 
 
     #jump meater
-    pygame.draw.rect(window , 'gray' , (0,0, 200 , 40))
+    pygame.draw.rect(window , 'gray' , (0,0, 100 , 40))
     if time <= 30:
         pygame.draw.rect(window , 'red' , (5,5,5,30))
     if time <= 27:
