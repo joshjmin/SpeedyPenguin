@@ -8,13 +8,13 @@
 
 ### Log for 2023-05-25
 
-> **Goals for today:** test some dino code 
+> **Goals for today:** start the basic functions 
 
-> **Accomplished:** x 
+> **Accomplished:** started jumping function
 
-> **Plans for next day:** do Y
+> **Plans for next day:** fix jumping function 
 
-> **Problems/bugs noted:** X doesn't work for uppercase inputs, should fix
+> **Problems/bugs noted:** circle is called regtangle 
 
 > **Other notes:** delete this line if not needed
 
