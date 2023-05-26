@@ -30,7 +30,7 @@
 > **Plans for next scrum:** continue to dissect and find solutions for jumping and other mechanisms
 
 
-### Meeting of 2023-05-25
+### Meeting of 2023-05-26
 
 > **Present:** Josh, Colin, Julia 
 
@@ -38,6 +38,6 @@
 
 > **New items/bug reports:** branches are causing issues 
 
-> **Plans for next scrum:** 
+> **Plans for next scrum:** fix image size 
 
 
