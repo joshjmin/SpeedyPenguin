@@ -17,9 +17,16 @@ time = 0
 run = True
 safe = True
 
+from sawczak_demo import image 
+
+
+image = Image.open('sawczak_demo.penguin.png')
+
+new_image = image.resize((500, 500))
+new_image.save('myimage_500.jpg')
 
 while run:
-    clock.tick(100)
+    clock.tick(120)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False 
@@ -61,12 +68,11 @@ while run:
     window.fill((0, 0, 64))
     pygame.draw.circle(window, 'green', (app.x , app.y) , 15)
     pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
+    pygame.draw.rect(window, 'gray', (0, 365, 400, 400))
 
-
-    pygame.draw.rect(window, 'gray' , (0,365,400,400))
 
     #jump meater
-    pygame.draw.rect(window , 'gray' , (0,0, 105 , 40))
+    pygame.draw.rect(window , 'gray' , (0,0, 200 , 40))
     if time <= 30:
         pygame.draw.rect(window , 'red' , (5,5,5,30))
     if time <= 27:
