@@ -29,3 +29,13 @@
 > **Plans for next day:** spend more time on jumping
 
 > **Problems/bugs noted:** needed to learn how to add a delay for jumping becase if i dont it will crash every time
+
+### Log for 2023-26-05
+
+> **Goals for today:** make a function game with no graphics and low obstcals
+
+> **Accomplished:** what i planned to do
+
+> **Plans for next day:** make a image able to be put on the original copy
+
+> **Problems/bugs noted:** multipul brances are annoying
