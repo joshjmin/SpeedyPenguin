@@ -26,7 +26,7 @@ while run:
 
     keys = pygame.key.get_pressed()    
     app.projx -= 2
-    #
+
     if app.projx < 0:
         app.projx = 450
     
@@ -51,13 +51,10 @@ while run:
     window.fill((0, 0, 64))
     pygame.draw.circle(window, 'green', (app.x , app.y) , 15)
     pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
-<<<<<<< HEAD
+
 
     pygame.draw.rect(window, 'gray' , (0,365,400,400))
-=======
-    pygame.draw.rect(window, 'gray' (0, 350, 400, 400))
 
->>>>>>> b7ee2962ecaeaac3a94eb94febed743510df88e8
     #jump meater
     pygame.draw.rect(window , 'gray' , (0,0, 200 , 40))
     if time <= 30:
