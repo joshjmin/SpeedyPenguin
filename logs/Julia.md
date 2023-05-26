@@ -19,3 +19,15 @@
 > **Other notes:** delete this line if not needed
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+### Log for 2023-05-25
+
+> **Goals for today:** Continue and improve code 
+
+> **Accomplished:** put image in, fixed jumping, added gravity, modified code 
+
+> **Plans for next day:** fix image size 
+
+> **Problems/bugs noted:** clashes in files and image is too large 
+
+> **Other notes:** delete this line if not needed
