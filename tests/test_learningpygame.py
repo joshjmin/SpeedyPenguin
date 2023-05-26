@@ -57,13 +57,13 @@ def move(event) -> None:
 
 def cpu_1_movment():
     if app.cpu_x > app.player_x:
-        app.cpu_x -= (1 + user_speed_scaling)
+        app.cpu_x -= (1 + speed_scaling)
     elif app.cpu_x < app.player_x:
-        app.cpu_x += (1 + user_speed_scaling)
+        app.cpu_x += (1 + speed_scaling)
     if app.cpu_y > app.player_y:
-        app.cpu_y -= (1 + user_speed_scaling)
+        app.cpu_y -= (1 + speed_scaling)
     elif app.cpu_y < app.player_y:
-        app.cpu_y += (1 + user_speed_scaling)
+        app.cpu_y += (1 + speed_scaling)
 def cpu_2_movment():
     if app.cpu_x_2 > app.player_x:
         app.cpu_x_2 -= (1.5 + speed_scaling)
