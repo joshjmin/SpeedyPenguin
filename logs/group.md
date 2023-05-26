@@ -7,7 +7,7 @@
 
 ### Meeting of 2023-xx-xx
 
-> **Present:** Jane, Sri
+> **Present:** 
 
 > **Project status:** Got x to work, still trying to manage y
 

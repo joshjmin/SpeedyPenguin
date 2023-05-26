@@ -6,16 +6,16 @@
 
 ## TEMPLATE (don't change, just copy and update)
 
-### Log for 2021-xx-xx
+### Log for 2023-05-25
 
-> **Goals for today:** do X
+> **Goals for today:** start and understand the mechanisms for the project
 
-> **Accomplished:** did X
+> **Accomplished:** looked at code online, fiddled with the pygame demos, and focused on the jumping mechanism 
 
-> **Plans for next day:** do Y
+> **Plans for next day:** continue to dissect the different mechanisms required
 
-> **Problems/bugs noted:** X doesn't work for uppercase inputs, should fix
+> **Problems/bugs noted:** not found yet
 
-> **Other notes:** delete this line if not needed
+> **Other notes:** 
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
