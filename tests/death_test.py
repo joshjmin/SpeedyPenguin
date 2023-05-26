@@ -17,7 +17,7 @@ app.projx = 450
 app.projy = 350
 time = 0
 run = True
-
+safe = True
 
 
 while run:
@@ -27,7 +27,7 @@ while run:
             run = False
 
     keys = pygame.key.get_pressed()    
-    app.projx -= 1
+    app.projx -= 2
     #make a timebar
     
     if keys[pygame.K_SPACE]:
@@ -45,9 +45,9 @@ while run:
         if time > 0:
             time -= 1
             print(time)
-    
     if app.x - app.projx < 25 and app.x - app.projx > -25 and app.y - app.projy < 25 and app.y - app.projy > -25:
         break
+
     window.fill((0, 0, 64))
     pygame.draw.circle(window, 'green', (app.x , app.y) , 15)
     pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
@@ -77,3 +77,4 @@ while run:
         pygame.draw.rect(window, 'green' , (55 , 5 , 40 , 30))
     pygame.display.flip()
 pygame.quit()
+exit()
