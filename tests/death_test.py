@@ -1,18 +1,16 @@
 import pygame
 
+
 pygame.init()
 window = pygame.display.set_mode((400, 400))
 clock = pygame.time.Clock()
-rect = pygame.Rect(135, 220, 30, 30) 
 class App:
     pass
 app = App()
 
-player = pygame.image.load('sawczak_demo/assets/penguin.png')
+air = 0
 app.x = 50
 app.y = 350
-app.barx = 50
-app.bary = 50
 app.projx = 450
 app.projy = 350
 time = 0
@@ -28,7 +26,9 @@ while run:
 
     keys = pygame.key.get_pressed()    
     app.projx -= 2
-    #make a timebar
+
+    if app.projx < 0:
+        app.projx = 450
     
     if keys[pygame.K_SPACE]:
         if app.y < 50:
@@ -52,6 +52,7 @@ while run:
     pygame.draw.circle(window, 'green', (app.x , app.y) , 15)
     pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
     pygame.draw.rect(window, 'gray', (0, 365, 400, 400))
+
 
     #jump meater
     pygame.draw.rect(window , 'gray' , (0, 0, 200 , 40))
