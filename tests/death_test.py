@@ -17,10 +17,17 @@ time = 0
 run = True
 safe = True
 
-character = pygame.image.load('sawczak_demo/assets/penguin.png')
+# #from sawczak_demo import image 
 
-character = image.resize((500, 500))
-new_image.save('myimage_500.jpg')
+
+# #image = image.open('sawczak_demo.penguin.png')
+
+#new_image = image.resize((500, 500))
+#new_image.save('myimage_500.jpg')
+
+penguin = pygame.image.load('sawczak_demo/assets/penguin.png')
+# new_image = image.resize((500, 500))
+# new_image.save('myimage_500.jpg')
 
 while run:
     clock.tick(120)
@@ -61,9 +68,9 @@ while run:
             print(time)
     if app.x - app.projx < 25 and app.x - app.projx > -25 and app.y - app.projy < 25 and app.y - app.projy > -25:
         break
-
+ 
     window.fill((0, 0, 64))
-    pygame.draw.circle(window, 'green', (app.x , app.y) , 15)
+    window.blit(penguin , (app.x - 100 , app.y - 100))
     pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
     pygame.draw.rect(window, 'gray', (0, 365, 400, 400))
 
