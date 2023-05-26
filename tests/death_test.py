@@ -17,15 +17,17 @@ time = 0
 run = True
 safe = True
 
-#from sawczak_demo import image 
+# #from sawczak_demo import image 
 
 
-#image = image.open('sawczak_demo.penguin.png')
+# #image = image.open('sawczak_demo.penguin.png')
 
 #new_image = image.resize((500, 500))
 #new_image.save('myimage_500.jpg')
 
 penguin = pygame.image.load('sawczak_demo/assets/penguin.png')
+# new_image = image.resize((500, 500))
+# new_image.save('myimage_500.jpg')
 
 while run:
     clock.tick(120)
