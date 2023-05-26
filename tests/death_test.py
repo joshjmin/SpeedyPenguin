@@ -70,7 +70,7 @@ while run:
         break
  
     window.fill((0, 0, 64))
-    window.blit(penguin , (app.x - 100 , app.y - 100))
+    window.blit(penguin, (app.x - 100 , app.y - 100))
     pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
     pygame.draw.rect(window, 'gray', (0, 365, 400, 400))
 

@@ -27,3 +27,13 @@
 > **Plans for next day:** continue to dissect the different mechanisms required
 
 > **Problems/bugs noted:** couldn't find a solution for a restricted and balanced jump
+
+### Log for 2023-05-26
+
+> **Goals for today:** continue to add code and adjust the jumping and obstacle mechanisms
+
+> **Accomplished:** modified code, fixed jumping and added floor to game, added obstacles, put penguin image on window 
+
+> **Plans for next day:** continue to fix the image penguin to fit the size and further details
+
+> **Problems/bugs noted:** penguin is too big, have to find a way to rersize
