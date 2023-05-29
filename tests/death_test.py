@@ -11,8 +11,8 @@ app = App()
 air = 0
 app.x = 50
 app.y = 350
-app.proj1x = 450
-app.proj1y = 350
+app.projx = 450
+app.projy = 350
 app.prox = 450
 app.proy = 350
 app.px = 450
@@ -36,12 +36,15 @@ def standerd():
 def fast():
     app.px -= 6 + speed
 def diver():
-    if app.dx <= 3:
-         pass
+    app.dx -= 3 + speed
+    if app.dy >= 375:
+        app.dy -= 2
+    
+         
 def middle():
     pass
 #generate assets
-penguin = pygame.image.load('sawczak_demo/assets/penguin.png')
+penguin = pygame.image.load('src/assets/penguin<3.png')    
 penguin = pygame.transform.scale(penguin , (50,50))
 ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
 ice = pygame.transform.scale(ice , (50,100 ))
@@ -74,6 +77,9 @@ while run:
     if app.px < -20:
         app.px = 450
         com = 1
+    if app.dx <= -20:
+        app.dx = 450
+        com = 1
     
     #making the projictle move and projectile movement
     if com == 1:
@@ -83,7 +89,7 @@ while run:
         #elif level == 2:
             #a = random.randint(0,1)
         #elif level >= 3:
-        a = random.randint(0,2)
+        a = random.randint(0,3)
         #else: TODO
          #   a = random.randint(0,4)
     if a == 0:
@@ -93,10 +99,9 @@ while run:
     elif a == 2:
         flyer()
     elif a == 3:
-        if app.dx > 150:
-            app.dx -= 2 + speed
-        elif app.dx > 100:
-            pass   
+        app.dx -= 2 + speed
+        if app.dy < 300:
+            app.dy += 2 + speed
     elif a == 4:
         pass
 
@@ -130,15 +135,17 @@ while run:
         break
     if app.x - app.px < 25 and app.x - app.px > -25 and app.y - app.py < 25 and app.y - app.py > -25:
         break
+    if app.x - app.dx < 25 and app.x - app.dx > -25 and app.y - app.dy < 25 and app.y - app.dy > -25:
+        break
  
     #drawings
     window.fill((0, 0, 64))
     window.blit(penguin, (app.x - 30  , app.y - 30))
     window.blit (ice, (app.projx - 30  , app.projy - 55))
-    # pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
     pygame.draw.circle(window, 'green' , (app.px , app.py) , 20)
     pygame.draw.circle(window, 'purple' , (app.prox , app.proy) , 20)
     pygame.draw.rect(window, 'gray', (0, 365, 400, 400))
+    pygame.draw.circle(window , 'yellow' , (app.dx , app.dy) , 20)
  
     #jump meater
     pygame.draw.rect(window , 'gray' , (0,0, 100 , 40))
