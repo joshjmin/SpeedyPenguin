@@ -15,9 +15,8 @@ time = 0
 run = True
 
 
-def jump():
-    time = 0
-    clock.tick(100)
+while run:
+    clock.tick(50)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
@@ -45,9 +44,4 @@ def jump():
     pygame.draw.circle(window, (255, 0, 0), (app.x,app.y), 15)
     pygame.display.flip()
 
-
-while run:
-    jump()
-
 pygame.quit()
-exit() 
