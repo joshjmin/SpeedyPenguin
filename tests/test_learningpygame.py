@@ -2,6 +2,9 @@ import pygame
 import random
 from time import sleep
 # Create an app object to store global variables
+
+#high score is 39 coins at 11,000
+
 class App:
     pass
 app = App()
@@ -9,10 +12,17 @@ app = App()
 pygame.init()
 pygame.display.set_caption('Collect all the coins')
 window = pygame.display.set_mode([400, 400])
+#making the player modle
+player = pygame.image.load('sawczak_demo/assets/player_avoid.png')
+player = pygame.transform.scale(player , (45,45 ))
 
+#making the bots
 
+bot_1 = pygame.image.load('sawczak_demo/assets/player_normal.png')
+bot_1 = pygame.transform.scale(bot_1 , (50,50 ))
 # Initialize app variables
-x = 10_000
+x = 20
+y = 20
 coins = 0
 app.player_x = 200
 app.player_y = 200
@@ -22,8 +32,8 @@ app.cpu_x_2 = -100
 app.cpu_y_2 = -100
 app.cpu_x_3 = 450
 app.cpu_y_3 = 450
-app.coin_x = random.randint(50,50)
-app.coin_y = random.randint(50,50)
+app.coin_x = random.randint(100,300)
+app.coin_y = random.randint(100,300)
 time = 0
 freeze = 'off'
 
@@ -132,15 +142,8 @@ while running:
     app.toatl = font.render(f'score; {time}' , True , 'black' , 'gray')
     window.blit(app.toatl , (10,10))
 
-    # Draw the player
-    pygame.draw.circle(window, 'green', (app.player_x, app.player_y), 20)
-    pygame.draw.circle(window, 'purple',(app.cpu_x , app.cpu_y) , 20)
-    pygame.draw.circle(window,'blue' , (app.cpu_x_2 , app.cpu_y_2) , 20)
-    pygame.draw.circle(window, 'red' , (app.cpu_x_3 , app.cpu_y_3) , 20)
-    pygame.draw.circle(window , 'yellow' , (app.coin_x , app.coin_y) , 10)
-
 #coin collection
-    if app.player_x - app.coin_x < 20 and app.player_y - app.coin_y < 20 and app.player_x - app.coin_x > -20 and app.player_y - app.coin_y > -20:
+    if app.player_x - app.coin_x < 30 and app.player_y - app.coin_y < 30 and app.player_x - app.coin_x > -30 and app.player_y - app.coin_y > -30:
         app.coin_x = random.randint(150,350)
         app.coin_y = random.randint(150,350)
         coins += 1
@@ -203,6 +206,13 @@ while running:
         for i in range(x):
             freeze = 'off'
     # Update the display
+
+        # Draw the player
+    window.blit(player, (app.player_x - x , app.player_y - y))
+    window.blit(bot_1, (app.cpu_x - x , app.cpu_y - y))
+    window.blit(bot_1, (app.cpu_x_2 - x, app.cpu_y_2 - y))
+    window.blit(bot_1, (app.cpu_x_3 - x , app.cpu_y_3 - y))
+    pygame.draw.circle(window , 'yellow' , (app.coin_x , app.coin_y) , 10)
     pygame.display.flip()
 # Quit the window
 pygame.quit()

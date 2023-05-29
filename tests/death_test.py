@@ -1,6 +1,5 @@
 import pygame
 
-
 pygame.init()
 window = pygame.display.set_mode((400, 400))
 clock = pygame.time.Clock()
@@ -46,7 +45,6 @@ while run:
         air += 0.07
     if app.y == 350:
         air = 0
-    print(air)
     
     if keys[pygame.K_SPACE]:
         if app.y < 50:
@@ -54,7 +52,6 @@ while run:
         elif time <= 30:
             app.y -= 5 - air
             time += 1
-            print(time)
         elif app.y < 350: 
             app.y += 3 + air
     elif app.y < 350:
@@ -66,7 +63,6 @@ while run:
     if app.y  == 350:
         if time > 0:
             time -= 1
-            print(time)
     if app.x - app.projx < 25 and app.x - app.projx > -25 and app.y - app.projy < 25 and app.y - app.projy > -25:
         break
  
@@ -79,7 +75,7 @@ while run:
     #jump meater
     pygame.draw.rect(window , 'gray' , (0,0, 100 , 40))
     if time <= 30:
-        pygame.draw.rect(window , 'red' , (5,5,5,30))
+        pygame.draw.rect(window , 'red' , (5,5,5,30)) 
     if time <= 27:
         pygame.draw.rect(window, 'red' , (10,5,10,30))
     if time <= 24:
