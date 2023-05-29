@@ -21,19 +21,18 @@ time = 0
 run = True
 safe = True
 com = 1
-
 #definitions
 def flyer():
     app.prox -= 2
     if app.prox < 100:
-        app.proy -= 2
-        app.prox -= 2
+        app.proy -= 4
+        app.prox -= 4
 
 def standerd():
-        app.projx -= 2
+        app.projx -= 3
 
 def fast():
-    app.px -= 5
+    app.px -= 6
 
 # #from sawczak_demo import image 
 
@@ -65,6 +64,7 @@ while run:
         com = 1
     if app.prox < -20:
         app.prox = 450
+        app.proy = 350
         com = 1
     if app.px < -20:
         app.px = 450
@@ -75,14 +75,14 @@ while run:
         com = 0
         a = random.randint(0,2)
     if a == 0:
-        app.projx -= 2
+        app.projx -= 3
     elif a == 1:
-        app.px -= 5
+        app.px -= 6
     else:
         #flyer
-        app.prox -= 2
+        app.prox -= 4
         if app.prox < 150:
-            app.proy -= 3
+            app.proy -= 4
             app.prox -= 2
 
     #calculate air time to incrase the fall speed
