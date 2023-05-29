@@ -44,7 +44,7 @@ ice = pygame.transform.scale(ice , (50,100 ))
 while run:
     #speed up
     gtime += 1
-    speed += (gtime /  500000)
+    speed += (gtime /  700000)
     #what level is the speed at
     level = int(speed // 1 + 1)
 
@@ -76,7 +76,7 @@ while run:
             a = 0
         elif level == 2:
             a = random.randint(0,1)
-        elif level == 3:
+        elif level >= 3:
             a = random.randint(0,2)
         #else: TODO
          #   a = random.randint(0,4)
