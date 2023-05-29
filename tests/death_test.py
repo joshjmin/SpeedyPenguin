@@ -11,8 +11,8 @@ app = App()
 air = 0
 app.x = 50
 app.y = 350
-app.projx = 450
-app.projy = 350
+app.proj1x = 450
+app.proj1y = 350
 app.prox = 450
 app.proy = 350
 app.px = 450
@@ -166,7 +166,7 @@ while run:
         pygame.draw.rect(window, 'green' , (55 , 5 , 40 , 30))
     #making a score board
     font = pygame.font.SysFont('New times roman', 24)
-    app.text = font.render(f'level; {level}', True, 'white', '#000064')
+    app.text = font.render(f'level: {level}', True, 'white', '#000064')
     window.blit(app.text , (100,375))
 
     pygame.display.flip()
