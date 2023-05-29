@@ -17,6 +17,8 @@ app.prox = 450
 app.proy = 350
 app.px = 450
 app.py = 350
+app.dx = 450
+app.dy = 50
 time = 0
 gtime = 0
 speed = 0 + (gtime)
@@ -33,7 +35,11 @@ def standerd():
         app.projx -= 3 + speed
 def fast():
     app.px -= 6 + speed
-
+def diver():
+    if app.dx <= 3:
+         pass
+def middle():
+    pass
 #generate assets
 penguin = pygame.image.load('sawczak_demo/assets/penguin.png')
 penguin = pygame.transform.scale(penguin , (50,50))
@@ -72,12 +78,12 @@ while run:
     #making the projictle move and projectile movement
     if com == 1:
         com = 0
-        if level == 1:
-            a = 0
-        elif level == 2:
-            a = random.randint(0,1)
-        elif level >= 3:
-            a = random.randint(0,2)
+        #if level == 1:
+            #a = 0
+        #elif level == 2:
+            #a = random.randint(0,1)
+        #elif level >= 3:
+        a = random.randint(0,2)
         #else: TODO
          #   a = random.randint(0,4)
     if a == 0:
@@ -102,12 +108,12 @@ while run:
         if app.y < 50:
             pass
         elif time <= 30:
-            app.y -= 5 - air
+            app.y -= 6 + speed - air
             time += 1
         elif app.y < 350: 
-            app.y += 3 + air
+            app.y += 5 + speed + air
     elif app.y < 350:
-        app.y += 3 + air
+        app.y += 5 + speed + air
     
     if app.y > 350:
         app.y = 350
