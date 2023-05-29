@@ -93,7 +93,10 @@ while run:
     elif a == 2:
         flyer()
     elif a == 3:
-        pass
+        if app.dx > 150:
+            app.dx -= 2 + speed
+        elif app.dx > 100:
+            pass   
     elif a == 4:
         pass
 
@@ -107,13 +110,13 @@ while run:
     if keys[pygame.K_SPACE]:
         if app.y < 50:
             pass
-        elif time <= 30:
-            app.y -= 6 + speed - air
+        elif time <= 25:
+            app.y -= 6 + speed / 2 - air
             time += 1
         elif app.y < 350: 
-            app.y += 5 + speed + air
+            app.y += 5 + speed / 2 + air
     elif app.y < 350:
-        app.y += 5 + speed + air
+        app.y += 5 + speed / 2 + air
     
     if app.y > 350:
         app.y = 350
