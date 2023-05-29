@@ -18,47 +18,46 @@ app.proy = 350
 app.px = 450
 app.py = 350
 time = 0
-run = True
+gtime = 0
+speed = 0 + (gtime)
+run = True 
 safe = True
 com = 1
 #definitions
 def flyer():
-    app.prox -= 2
-    if app.prox < 100:
-        app.proy -= 4
-        app.prox -= 4
-
+    app.prox -= 4
+    if app.prox < 150:
+        app.proy -= 4 + speed
+        app.prox -= 2 + speed
 def standerd():
-        app.projx -= 3
-
+        app.projx -= 3 + speed
 def fast():
-    app.px -= 6
+    app.px -= 6 + speed
 
-# #from sawczak_demo import image 
-
-
-# #image = image.open('sawczak_demo.penguin.png')
-
-#new_image = image.resize((500, 500))
-#new_image.save('myimage_500.jpg')
-
+#generate assets
 penguin = pygame.image.load('sawczak_demo/assets/penguin.png')
-penguin = pygame.transform.scale(penguin , (50,100 ))
-# new_image = image.resize((500, 500))
-# new_image.save('myimage_500.jpg')
+penguin = pygame.transform.scale(penguin , (50,50))
+ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
+ice = pygame.transform.scale(ice , (50,100 ))
 
+#main loop
 while run:
+    #speed up
+    gtime += 1
+    speed += (gtime /  500000)
+    #what level is the speed at
+    level = int(speed // 1 + 1)
+
     clock.tick(120)
+    #check if they quit
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False 
+    #keys means if a key is pressed
+    keys = pygame.key.get_pressed()   
 
-    keys = pygame.key.get_pressed()    
-    #make the projectile
-    if com == 1:
-        a = random.randint(0,2)
     #reset the projectiles
-    if app.projx < -20:
+    if app.projx < 0:
         app.projx = 450
         app.proy = 350
         com = 1
@@ -70,20 +69,27 @@ while run:
         app.px = 450
         com = 1
     
-    #making the projictle moove
+    #making the projictle move and projectile movement
     if com == 1:
         com = 0
-        a = random.randint(0,2)
+        if level == 1:
+            a = 0
+        elif level == 2:
+            a = random.randint(0,1)
+        elif level == 3:
+            a = random.randint(0,2)
+        #else: TODO
+         #   a = random.randint(0,4)
     if a == 0:
-        app.projx -= 3
+        standerd()
     elif a == 1:
-        app.px -= 6
-    else:
-        #flyer
-        app.prox -= 4
-        if app.prox < 150:
-            app.proy -= 4
-            app.prox -= 2
+        fast()
+    elif a == 2:
+        flyer()
+    elif a == 3:
+        pass
+    elif a == 4:
+        pass
 
     #calculate air time to incrase the fall speed
     if app.y < 350:
@@ -118,12 +124,13 @@ while run:
  
     #drawings
     window.fill((0, 0, 64))
-    window.blit(penguin, (app.x - 20  , app.y - 75))
-    pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
+    window.blit(penguin, (app.x - 30  , app.y - 30))
+    window.blit (ice, (app.projx - 30  , app.projy - 55))
+    # pygame.draw.circle(window, 'red' , (app.projx , app.projy) , 20)
     pygame.draw.circle(window, 'green' , (app.px , app.py) , 20)
     pygame.draw.circle(window, 'purple' , (app.prox , app.proy) , 20)
     pygame.draw.rect(window, 'gray', (0, 365, 400, 400))
-
+ 
     #jump meater
     pygame.draw.rect(window , 'gray' , (0,0, 100 , 40))
     if time <= 30:
@@ -148,6 +155,11 @@ while run:
         pygame.draw.rect(window, 'green' , (50,5,40,30))
     if time <= 0:
         pygame.draw.rect(window, 'green' , (55 , 5 , 40 , 30))
+    #making a score board
+    font = pygame.font.SysFont('New times roman', 24)
+    app.text = font.render(f'level; {level}', True, 'white', '#000064')
+    window.blit(app.text , (100,375))
+
     pygame.display.flip()
 pygame.quit()
 exit()
