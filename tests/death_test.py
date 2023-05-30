@@ -2,6 +2,48 @@
 import pygame
 import random
 from time import sleep
+class App:
+    pass
+app = App()
+
+def set_ping(event) -> None:
+    app.ping_pos = pygame.mouse.get_pos()    
+
+def opening_screen():
+
+# Set up the window
+    pygame.init()
+    pygame.display.set_caption('press the button to play')
+    app.ping_pos = [0,0]
+   
+#opening screen
+    running = True
+    while running:
+        window = pygame.display.set_mode([200, 200])
+        pygame.draw.rect(window , 'gray' , (0,0,200,200))
+        font3 = pygame.font.SysFont('New times roman', 24)
+        app.text3 = font3.render(f'click me to play', True, '#0000FF', '#A5F2F3')
+        window.blit(app.text3 , (75,125))
+        
+        for event in pygame.event.get():
+
+        # User clicks window close button
+            if event.type == pygame.QUIT:
+                running = False
+        
+        # A mouse button is pressed down
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                set_ping(event)
+        print(app.ping_pos)
+        if app.ping_pos[0] > 70 and app.ping_pos[0] < 190 and app.ping_pos[1] < 111 and app.ping_pos[1] > 154:
+            running = False
+    # Update the display
+        pygame.display.flip()
+
+# Quit the window
+    pygame.quit()
+
+opening_screen()
 
 #start window and other starting actions
 pygame.init()

@@ -49,3 +49,14 @@
 > **Plans for next day:** make new charecters, work on art, add animation to the charecters
 
 > **Problems/bugs noted:** none today
+
+### Log for 2021-05-30
+
+> **Goals for today:** finish all gameplay features
+
+> **Accomplished:** finished all gameplay features
+
+> **Plans for next day:** make a opening display screen
+
+> **Problems/bugs noted:** (for the display screen) the screen is constantly flashing
+
