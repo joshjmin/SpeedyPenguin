@@ -19,6 +19,8 @@ app.px = 450
 app.py = 350
 app.dx = 450
 app.dy = 50
+app.middlex = 450
+app.middley = 330
 time = 0
 gtime = 0
 speed = 0 + (gtime)
@@ -27,8 +29,8 @@ safe = True
 com = 1
 #definitions
 def flyer():
-    app.prox -= 4
-    if app.prox < 150:
+    app.prox -= 4 + speed
+    if app.prox < 170:
         app.proy -= 4 + speed
         app.prox -= 2 + speed
 def standerd():
@@ -36,13 +38,11 @@ def standerd():
 def fast():
     app.px -= 6 + speed
 def diver():
-    app.dx -= 3 + speed
-    if app.dy >= 375:
-        app.dy -= 2
-    
-         
+    if app.dy <= 330:
+        app.dy += 3 +speed
+    app.dx -= 1 + speed
 def middle():
-    pass
+    app.middlex -= 5 + speed
 #generate assets
 penguin = pygame.image.load('src/assets/penguin<3.png')    
 penguin = pygame.transform.scale(penguin , (50,50))
@@ -51,13 +51,12 @@ ice = pygame.transform.scale(ice , (50,100 ))
 
 #main loop
 while run:
+    clock.tick(120)
     #speed up
     gtime += 1
-    speed += (gtime /  700000)
+    speed += (gtime /  5000000)
     #what level is the speed at
-    level = int(speed // 1 + 1)
-
-    clock.tick(120)
+    level = int((gtime // 1000) + 1)
     #check if they quit
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -77,21 +76,25 @@ while run:
     if app.px < -20:
         app.px = 450
         com = 1
-    if app.dx <= -20:
+    if app.dx <= -20: 
         app.dx = 450
+        app.dy = 0
+        com = 1
+    if app.middlex <= -20:
+        app.middlex = 450
         com = 1
     
     #making the projictle move and projectile movement
     if com == 1:
         com = 0
-        #if level == 1:
-            #a = 0
-        #elif level == 2:
-            #a = random.randint(0,1)
-        #elif level >= 3:
-        a = random.randint(0,3)
-        #else: TODO
-         #   a = random.randint(0,4)
+        if level == 1:
+            a = 0
+        elif level == 2:
+            a = random.randint(0,1)
+        elif level >= 3:
+            a = random.randint(0,2)
+        else:
+            a = random.randint(0,4)
     if a == 0:
         standerd()
     elif a == 1:
@@ -99,11 +102,9 @@ while run:
     elif a == 2:
         flyer()
     elif a == 3:
-        app.dx -= 2 + speed
-        if app.dy < 300:
-            app.dy += 2 + speed
+        diver()
     elif a == 4:
-        pass
+        middle()
 
     #calculate air time to incrase the fall speed
     if app.y < 350:
@@ -112,7 +113,7 @@ while run:
         air = 0
     
     #track the inputs
-    if keys[pygame.K_SPACE]:
+    if keys[pygame.K_UP]:
         if app.y < 50:
             pass
         elif time <= 25:
@@ -122,6 +123,12 @@ while run:
             app.y += 5 + speed / 2 + air
     elif app.y < 350:
         app.y += 5 + speed / 2 + air
+    
+    if keys[pygame.K_DOWN]:
+        if app.py < 350:
+            pass
+        else:
+            app.py += 10
     
     if app.y > 350:
         app.y = 350
@@ -137,6 +144,8 @@ while run:
         break
     if app.x - app.dx < 25 and app.x - app.dx > -25 and app.y - app.dy < 25 and app.y - app.dy > -25:
         break
+    if app.x - app.middlex < 25 and app.x - app.middlex > -25 and app.y - app.middley < 25 and app.y - app.middley > -25:
+        break
  
     #drawings
     window.fill((0, 0, 64))
@@ -146,6 +155,7 @@ while run:
     pygame.draw.circle(window, 'purple' , (app.prox , app.proy) , 20)
     pygame.draw.rect(window, 'gray', (0, 365, 400, 400))
     pygame.draw.circle(window , 'yellow' , (app.dx , app.dy) , 20)
+    pygame.draw.circle(window , 'brown' , (app.middlex , app.middley) , 20)
  
     #jump meater
     pygame.draw.rect(window , 'gray' , (0,0, 100 , 40))
