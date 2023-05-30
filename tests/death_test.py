@@ -14,16 +14,16 @@ app = App()
 
 
 air = 0
-app.x = 50
-app.y = 350
-app.projx = 450
-app.projy = 350
-app.prox = 450
-app.proy = 350
-app.px = 450
-app.py = 350
-app.dx = 450
-app.dy = 50
+app.p_x = 50
+app.p_y = 350
+app.standerdx = 450
+app.standerdy = 350
+app.flyerx = 450
+app.flyery = 350
+app.fastx = 450
+app.fasty = 350
+app.diverx = 450
+app.divery = 50
 app.middlex = 450
 app.middley = 330
 app.uperx = 500
@@ -45,7 +45,7 @@ def flyer():
         app.proy -= 4 + speed
         app.prox -= 2 + speed
 def standerd():
-        app.projx -= 3 + speed
+        app.standerdx -= 3 + speed
 def fast():
     app.px -= 6 + speed
 def diver():
@@ -62,14 +62,14 @@ def reset():
     air = 0
     app.x = 50
     app.y = 350
-    app.projx = 450
-    app.projy = 350
-    app.prox = 450
-    app.proy = 350
-    app.px = 450
-    app.py = 350
-    app.dx = 450
-    app.dy = 50
+    app.standerdx = 450
+    app.standerdy = 350
+    app.flyerx = 450
+    app.flyery = 350
+    app.fastx = 450
+    app.fasty = 350
+    app.diverx = 450
+    app.divery = 50
     app.middlex = 450
     app.middley = 330
     app.uperx = 500
@@ -103,20 +103,19 @@ while run:
             run = False 
 
     #reset the projectiles
-    if app.projx < 0:
-        app.projx = 450
-        app.proy = 350
+    if app.standerdx < 0:
+        app.standerdx = 450
         com = 1
-    if app.prox < -20:
-        app.prox = 450
-        app.proy = 350
+    if app.flyerx < -20:
+        app.flyerx = 450
+        app.flyery = 350
         com = 1
-    if app.px < -20:
-        app.px = 450
+    if app.fastx < -20:
+        app.fastx = 450
         com = 1
-    if app.dx <= -20: 
-        app.dx = 450
-        app.dy = 0
+    if app.diverx <= -20: 
+        app.diverx = 450
+        app.divery = 0
         com = 1
     if app.middlex <= -20:
         app.middlex = 450
@@ -145,9 +144,9 @@ while run:
         middle()
 
     #calculate air time to incrase the fall speed
-    if app.y < 350:
+    if app.p_y < 350:
         air += 0.07
-    if app.y == 350:
+    if app.p_y == 350:
         air = 0
     
     #track inputs
@@ -155,58 +154,58 @@ while run:
     keys = pygame.key.get_pressed()   
     #what to do if preseed
     if keys[pygame.K_UP]:
-        if app.y < 50:
+        if app.p_y < 50:
             pass
         elif time <= 20:
-            app.y -= 6 + speed / 2 - air
+            app.p_y -= 6 + speed / 2 - air
             time += 1
             motion = 'jumping'
-        elif app.y < 350: 
-            app.y += 5 + speed / 2 + air
+        elif app.p_y < 350: 
+            app.p_y += 5 + speed / 2 + air
             motion = 'jumping'
-    elif app.y < 350:
-        app.y += 5 + speed / 2 + air
+    elif app.p_y < 350:
+        app.p_y += 5 + speed / 2 + air
         motion = 'jumping'
     
-    if app.y > 350:
-        app.y = 350
+    if app.p_y > 350:
+        app.p_y = 350
     
     if keys[pygame.K_DOWN]:
-        if app.y < 349:
+        if app.p_y < 349:
             pass
         else:
-            if app.y >= 360:
-                app.y = 360
-            app.y += 5
+            if app.p_y >= 360:
+                app.p_y = 360
+            app.p_y += 5
             motion = 'sliding'
-    elif app.y > 360:
-        app.y = 350
+    elif app.p_y > 360:
+        app.p_y = 350
 
-    if app.y == 350:
+    if app.p_y == 350:
         motion = 'standing'
 
     #recahrge jump power
-    if app.y  == 350:
+    if app.p_y  == 350:
         if time > 0:
             time -= 1
 
     #check for collisions
-    if app.x - app.projx < 25 and app.x - app.projx > -25 and app.y - app.projy < 25 and app.y - app.projy > -25:
-        gtime = 1000
-        reset()
-    if app.x - app.prox < 35 and app.x - app.prox > -35 and app.y - app.proy < 35 and app.y - app.proy > -35:
+    if app.p_x - app.standerdx < 25 and app.p_x - app.standerdx > -25 and app.p_y - app.standerdy < 25 and app.p_y - app.standerdy > -25:
         gtime = 0
         reset()
-    if app.x - app.px < 25 and app.x - app.px > -25 and app.y - app.py < 25 and app.y - app.py > -25:
+    if app.p_x - app.flyerx < 35 and app.p_x - app.flyerx > -35 and app.p_y - app.flyery < 35 and app.p_y - app.flyery > -35:
         gtime = 0
         reset()
-    if app.x - app.dx < 25 and app.x - app.dx > -25 and app.y - app.dy < 25 and app.y - app.dy > -25:
+    if app.p_x - app.fastx < 25 and app.p_x - app.fastx > -25 and app.p_y - app.fasty < 25 and app.p_y - app.fasty > -25:
         gtime = 0
         reset()
-    if app.x - app.middlex < 25 and app.x - app.middlex > -25 and app.y - app.middley < 25 and app.y - app.middley > -25:
+    if app.p_x - app.diverx < 25 and app.p_x - app.diverx > -25 and app.p_y - app.divery < 25 and app.p_y - app.divery > -25:
         gtime = 0
         reset()
-    if app.x - app.uperx < 25 and app.x - app.uperx > -25 and app.y - app.upery < 25 and app.y - app.upery > -25:
+    if app.p_x - app.middlex < 25 and app.p_x - app.middlex > -25 and app.p_y - app.middley < 25 and app.p_y - app.middley > -25:
+        gtime = 0
+        reset()
+    if app.p_x - app.uperx < 25 and app.p_x - app.uperx > -25 and app.p_y - app.upery < 25 and app.p_y - app.upery > -25:
         gtime = 0
         reset()
 
@@ -215,16 +214,16 @@ while run:
     #make the backround #TODO better
     window.fill((0, 0, 64))
     #draw the charecters
-    window.blit(penguin, (app.x - 30  , app.y - 30))
-    window.blit (ice, (app.projx - 50  , app.projy - 35))
-    pygame.draw.circle(window, 'green' , (app.px , app.py) , 20)
-    pygame.draw.circle(window, 'purple' , (app.prox , app.proy) , 20)
+    window.blit(penguin, (app.p_x - 30  , app.p_y - 30))
+    window.blit (ice, (app.standerdx - 50  , app.standerdy - 35))
+    pygame.draw.circle(window, 'green' , (app.fastx , app.fasty) , 20)
+    pygame.draw.circle(window, 'purple' , (app.flyerx , app.flyery) , 20)
     pygame.draw.rect(window, '#A5F2F3', (0, 365, 400, 400))
-    pygame.draw.circle(window , 'yellow' , (app.dx , app.dy) , 20)
+    pygame.draw.circle(window , 'yellow' , (app.diverx , app.divery) , 20)
     pygame.draw.circle(window , 'brown' , (app.middlex , app.middley) , 20)
     if app.uperx == app.middlex:
         pygame.draw.circle(window , 'brown' , (app.uperx , app.upery) , 20)
-    elif app.uperx == app.dx:
+    elif app.uperx == app.diverx:
         pygame.draw.circle(window , 'yellow' , (app.uperx , app.upery) , 20)
  
     #jump meter
