@@ -37,3 +37,13 @@
 > **Plans for next day:** continue to fix the image penguin to fit the size and further details
 
 > **Problems/bugs noted:** penguin is too big, have to find a way to rersize
+
+### Log for 2023-05-29
+
+> **Goals for today:** continue to add code and adjust the jumping and obstacles
+
+> **Accomplished:** understood changed code, adjusted jumping and obstacle speed and scales
+
+> **Plans for next day:** add characters and extra obstacles for next levels, readjust jumping speed and ieght
+
+> **Problems/bugs noted:** code program couldn't open in terminal

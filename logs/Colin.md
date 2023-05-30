@@ -30,7 +30,7 @@
 
 > **Problems/bugs noted:** needed to learn how to add a delay for jumping becase if i dont it will crash every time
 
-### Log for 2023-26-05
+### Log for 2023-05-26
 
 > **Goals for today:** make a function game with no graphics and low obstcals
 
@@ -39,3 +39,13 @@
 > **Plans for next day:** make a image able to be put on the original copy
 
 > **Problems/bugs noted:** multipul brances are annoying
+
+### Log for 2023-05-29
+
+> **Goals for today:** make new charecters and clean out the code a little bid, make a speed mechanic, fix jumping, add immiges
+
+> **Accomplished:** make new charecters and clean out the code a little bid, make a speed mechanic, fix jumping, add immiges
+
+> **Plans for next day:** make new charecters, work on art, add animation to the charecters
+
+> **Problems/bugs noted:** none today

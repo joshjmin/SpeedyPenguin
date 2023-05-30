@@ -16,7 +16,6 @@
 
 > **Problems/bugs noted:** circle is called regtangle 
 
-> **Other notes:** delete this line if not needed
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
 
@@ -30,4 +29,15 @@
 
 > **Problems/bugs noted:** clashes in files and image is too large 
 
-> **Other notes:** delete this line if not needed
+> 
+
+
+### Log for 2023-05-29
+
+> **Goals for today:** Continue and improve code 
+
+> **Accomplished:**  Fixed Jumping speed, created levels and added more jumping and other iteams like the flying ball
+
+> **Plans for next day:** Find out why Josh and I cannot open the game 
+
+> **Problems/bugs noted:** game not opening, opens for a second and then closes 
