@@ -28,6 +28,7 @@ app.middlex = 450
 app.middley = 330
 app.uperx = 500
 app.upery = 500
+leveling = False
 
 time = 0
 gtime = 0
@@ -40,18 +41,18 @@ frame = 0
 
 #definitions
 def flyer():
-    app.prox -= 4 + speed
-    if app.prox < 150:
-        app.proy -= 4 + speed
-        app.prox -= 2 + speed
+    app.flyerx -= 4 + speed
+    if app.flyerx < 150:
+        app.flyery -= 4 + speed
+        app.flyerx -= 2 + speed
 def standerd():
         app.standerdx -= 3 + speed
 def fast():
-    app.px -= 6 + speed
+    app.fastx -= 6 + speed
 def diver():
-    if app.dy <= 325:
-        app.dy += 3 +speed
-    app.dx -= 2 + speed
+    if app.divery <= 325:
+        app.divery += 3 +speed
+    app.diverx -= 2 + speed
     app.uperx = app.dx 
     app.upery = app.dy - 30
 def middle():
@@ -124,12 +125,15 @@ while run:
     #making the projictle move and projectile movement
     if com == 1:
         com = 0
-        if level == 1:
-            a = random.randint(0,1)
-        elif level == 2:
-            a = random.randint(0,2)
-        elif level >= 3:
-            a = random.randint(0,4)
+        if leveling == True:
+            if level == 1:
+                a = random.randint(0,1)
+            elif level == 2:
+                a = random.randint(0,2)
+            elif level >= 3:
+                a = random.randint(0,4)
+            else:
+                a = random.randint(0,5)
         else:
             a = random.randint(0,5)
     if a == 0:
