@@ -27,6 +27,7 @@ speed = 0 + (gtime)
 run = True 
 safe = True
 com = 1
+motion = 'standing'
 #definitions
 def flyer():
     app.prox -= 4 + speed
@@ -42,7 +43,7 @@ def diver():
         app.dy += 3 +speed
     app.dx -= 1 + speed
 def middle():
-    app.middlex -= 5 + speed
+    app.middlex -= 3 + speed
 #generate assets
 penguin = pygame.image.load('src/assets/penguin<3.png')    
 penguin = pygame.transform.scale(penguin , (50,50))
@@ -88,22 +89,22 @@ while run:
     if com == 1:
         com = 0
         if level == 1:
-            a = 0
-        elif level == 2:
             a = random.randint(0,1)
-        elif level >= 3:
+        elif level == 2:
             a = random.randint(0,2)
+        elif level >= 3:
+            a = random.randint(0,3)
         else:
             a = random.randint(0,4)
     if a == 0:
         standerd()
-    elif a == 1:
-        fast()
     elif a == 2:
-        flyer()
+        fast()
     elif a == 3:
-        diver()
+        flyer()
     elif a == 4:
+        diver()
+    elif a == 1:
         middle()
 
     #calculate air time to incrase the fall speed
@@ -112,30 +113,46 @@ while run:
     if app.y == 350:
         air = 0
     
+
+
     #track the inputs
     if keys[pygame.K_UP]:
         if app.y < 50:
             pass
-        elif time <= 25:
+        elif time <= 20:
             app.y -= 6 + speed / 2 - air
             time += 1
+            motion = 'jumping'
         elif app.y < 350: 
             app.y += 5 + speed / 2 + air
+            motion = 'jumping'
     elif app.y < 350:
         app.y += 5 + speed / 2 + air
-    
-    if keys[pygame.K_DOWN]:
-        if app.py < 350:
-            pass
-        else:
-            app.py += 10
+        motion = 'jumping'
     
     if app.y > 350:
         app.y = 350
+    
+    if keys[pygame.K_DOWN]:
+        if app.y < 349:
+            pass
+        else:
+            if app.y >= 360:
+                app.y = 360
+            app.y += 10
+            motion = 'sliding'
+    elif app.y > 350:
+        app.y = 350
 
+    if app.y == 350:
+        motion = 'standing'
+
+    #recahrge jump power
     if app.y  == 350:
         if time > 0:
             time -= 1
+
+    #check for collisions
     if app.x - app.projx < 25 and app.x - app.projx > -25 and app.y - app.projy < 25 and app.y - app.projy > -25:
         break
     if app.x - app.prox < 35 and app.x - app.prox > -35 and app.y - app.proy < 35 and app.y - app.proy > -35:
@@ -148,6 +165,7 @@ while run:
         break
  
     #drawings
+    #TODO make animation for the walking of the main player
     window.fill((0, 0, 64))
     window.blit(penguin, (app.x - 30  , app.y - 30))
     window.blit (ice, (app.projx - 30  , app.projy - 55))
@@ -159,25 +177,25 @@ while run:
  
     #jump meter
     pygame.draw.rect(window , 'gray' , (0,0, 100 , 40))
-    if time <= 30:
+    if time <= 20:
         pygame.draw.rect(window , 'red' , (5,5,5,30)) 
-    if time <= 27:
-        pygame.draw.rect(window, 'red' , (10,5,10,30))
-    if time <= 24:
-        pygame.draw.rect(window, 'red' , (15,5,15,30))
-    if time <= 21:
-        pygame.draw.rect(window, 'orange' , (20,5,20,30))
     if time <= 18:
-        pygame.draw.rect(window, 'orange' , (25,5,25,30))
-    if time <= 15:
-        pygame.draw.rect(window, 'orange' , (30,5,30,30))
+        pygame.draw.rect(window, 'red' , (10,5,10,30))
+    if time <= 16:
+        pygame.draw.rect(window, 'red' , (15,5,15,30))
+    if time <= 14:
+        pygame.draw.rect(window, 'orange' , (20,5,20,30))
     if time <= 12:
+        pygame.draw.rect(window, 'orange' , (25,5,25,30))
+    if time <= 10:
+        pygame.draw.rect(window, 'orange' , (30,5,30,30))
+    if time <= 8:
         pygame.draw.rect(window, 'yellow' , (35,5,35,30))
-    if time <= 9:
-        pygame.draw.rect(window, 'yellow' , (40,5,40,30))
     if time <= 6:
+        pygame.draw.rect(window, 'yellow' , (40,5,40,30))
+    if time <= 4:
         pygame.draw.rect(window, 'yellow' , (45,5,45,30))
-    if time <= 3:
+    if time <= 2:
         pygame.draw.rect(window, 'green' , (50,5,40,30))
     if time <= 0:
         pygame.draw.rect(window, 'green' , (55 , 5 , 40 , 30))
@@ -185,7 +203,6 @@ while run:
     font = pygame.font.SysFont('New times roman', 24)
     app.text = font.render(f'LEVEL: {level}', True, 'white', '#000064')
     window.blit(app.text , (100,375))
-
     pygame.display.flip()
 pygame.quit()
 exit()
