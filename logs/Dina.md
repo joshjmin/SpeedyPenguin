@@ -68,3 +68,28 @@
 > **Other notes:** Figure out how to use adobe more efficiently.
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+
+***********************************
+# INSTRUCTIONS FOR THE INDIVIDUAL LOG
+* First, copy this and save it with your name. For example: `jacob.md`.
+* EACH PERSON must update THEIR OWN file at the end of each class.
+* Copy and paste the template below, and fill in the data.
+* Then commit & push it.
+
+## TEMPLATE (don't change, just copy and update)
+
+### Log for 2021-05-29
+
+> **Goals for today:** Finish two more character drawings. 
+
+> **Accomplished:** Finished two more character drawings. 
+
+> **Plans for next day:** Make two more character drawings, and background drawing? 
+
+> **Problems/bugs noted:** None.
+
+> **Other notes:** Watch tutorials how to use adobe illustrator
+
+## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
