@@ -47,3 +47,23 @@
 > **Plans for next day:** add characters and extra obstacles for next levels, readjust jumping speed and ieght
 
 > **Problems/bugs noted:** code program couldn't open in terminal
+
+### Log for 2023-05-30
+
+> **Goals for today:** add details like a start and end screen, multiple keys, sound, work on illustrations for characters
+
+> **Accomplished:** helped design character, fixed and added multiple keys for jump and slide
+
+> **Plans for next day:** find and add sounds to game
+
+> **Problems/bugs noted:** none
+
+### Log for 2023-05-31
+ABSENT
+> **Goals for today:** 
+
+> **Accomplished:** 
+
+> **Plans for next day:** 
+
+> **Problems/bugs noted:** 
