@@ -82,10 +82,6 @@ penguin = pygame.image.load('src/assets/penguin<3.png')
 penguin = pygame.transform.scale(penguin , (50,50))
 ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
 ice = pygame.transform.scale(ice , (100,90 ))
-fox = pygame.image.load('src/assets/artic_fox.jpeg')
-fox = pygame.transform.scale(fox , (50 , 50))
-owl = pygame.image.load('src/assets/sn_owl.jpeg')
-owl = pygame.transform.scale(owl , (50 , 50))
 
 #main loop
 while run:
