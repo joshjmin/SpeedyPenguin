@@ -53,8 +53,8 @@ def diver():
     if app.divery <= 325:
         app.divery += 3 +speed
     app.diverx -= 2 + speed
-    app.uperx = app.dx 
-    app.upery = app.dy - 30
+    app.uperx = app.diverx 
+    app.upery = app.divery - 30
 def middle():
     app.middlex -= 3 + speed
     app.uperx = app.middlex 
@@ -133,9 +133,9 @@ while run:
             elif level >= 3:
                 a = random.randint(0,4)
             else:
-                a = random.randint(0,5)
+                a = random.randint(0,4)
         else:
-            a = random.randint(0,5)
+            a = random.randint(0,4)
     if a == 0:
         standerd()
     elif a == 2:
@@ -157,7 +157,7 @@ while run:
     #keys means if a key is pressed
     keys = pygame.key.get_pressed()   
     #what to do if preseed
-    if keys[pygame.K_UP]:
+    if keys[pygame.K_UP or pygame.K_SPACE or pygame.K_w]:
         if app.p_y < 50:
             pass
         elif time <= 20:
@@ -174,7 +174,7 @@ while run:
     if app.p_y > 350:
         app.p_y = 350
     
-    if keys[pygame.K_DOWN]:
+    if keys[pygame.K_DOWN or pygame.K_s]:
         if app.p_y < 349:
             pass
         else:
