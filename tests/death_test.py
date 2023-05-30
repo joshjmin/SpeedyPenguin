@@ -157,7 +157,7 @@ while run:
     #keys means if a key is pressed
     keys = pygame.key.get_pressed()   
     #what to do if preseed
-    if keys[pygame.K_UP or pygame.K_SPACE or pygame.K_w]:
+    if keys[pygame.K_UP] or keys[pygame.K_SPACE]  or keys[pygame.K_w]:
         if app.p_y < 50:
             pass
         elif time <= 20:
@@ -174,7 +174,7 @@ while run:
     if app.p_y > 350:
         app.p_y = 350
     
-    if keys[pygame.K_DOWN or pygame.K_s]:
+    if keys[pygame.K_DOWN] or keys[pygame.K_s]:
         if app.p_y < 349:
             pass
         else:
