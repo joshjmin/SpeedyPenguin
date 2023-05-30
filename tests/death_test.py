@@ -1,6 +1,7 @@
 #imports
 import pygame
 import random
+from time import sleep
 
 #start window and other starting actions
 pygame.init()
@@ -10,6 +11,8 @@ class App:
     pass
 app = App()
 #making placements and terms
+
+
 air = 0
 app.x = 50
 app.y = 350
@@ -55,6 +58,24 @@ def middle():
     app.middlex -= 3 + speed
     app.uperx = app.middlex 
     app.upery = app.middley - 30
+def reset():
+    air = 0
+    app.x = 50
+    app.y = 350
+    app.projx = 450
+    app.projy = 350
+    app.prox = 450
+    app.proy = 350
+    app.px = 450
+    app.py = 350
+    app.dx = 450
+    app.dy = 50
+    app.middlex = 450
+    app.middley = 330
+    app.uperx = 500
+    app.upery = 500
+    speed = 0
+    sleep(1)
 
 #generate assets
 penguin = pygame.image.load('src/assets/penguin<3.png')    
@@ -171,17 +192,23 @@ while run:
 
     #check for collisions
     if app.x - app.projx < 25 and app.x - app.projx > -25 and app.y - app.projy < 25 and app.y - app.projy > -25:
-        break
+        gtime = 0
+        reset()
     if app.x - app.prox < 35 and app.x - app.prox > -35 and app.y - app.proy < 35 and app.y - app.proy > -35:
-        break
+        gtime = 0
+        reset()
     if app.x - app.px < 25 and app.x - app.px > -25 and app.y - app.py < 25 and app.y - app.py > -25:
-        break
+        gtime = 0
+        reset()
     if app.x - app.dx < 25 and app.x - app.dx > -25 and app.y - app.dy < 25 and app.y - app.dy > -25:
-        break
+        gtime = 0
+        reset()
     if app.x - app.middlex < 25 and app.x - app.middlex > -25 and app.y - app.middley < 25 and app.y - app.middley > -25:
-        break
+        gtime = 0
+        reset()
     if app.x - app.uperx < 25 and app.x - app.uperx > -25 and app.y - app.upery < 25 and app.y - app.upery > -25:
-        break
+        gtime = 0
+        reset()
 
     #drawings
     #TODO make animation for the walking of the main player
@@ -228,6 +255,10 @@ while run:
     font = pygame.font.SysFont('New times roman', 24)
     app.text = font.render(f'LEVEL: {level}', True, '#0000FF', '#A5F2F3')
     window.blit(app.text , (300,375))
+    #score
+    font_2 = pygame.font.SysFont('New times roman', 24)
+    app.text_2 = font_2.render(f'score: {gtime}', True, '#0000FF', '#A5F2F3')
+    window.blit(app.text_2 , (100,375))
     pygame.display.flip()
 pygame.quit()
 exit()
