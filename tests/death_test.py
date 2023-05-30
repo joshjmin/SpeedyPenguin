@@ -157,7 +157,7 @@ while run:
     pygame.draw.circle(window , 'yellow' , (app.dx , app.dy) , 20)
     pygame.draw.circle(window , 'brown' , (app.middlex , app.middley) , 20)
  
-    #jump meater
+    #jump meter
     pygame.draw.rect(window , 'gray' , (0,0, 100 , 40))
     if time <= 30:
         pygame.draw.rect(window , 'red' , (5,5,5,30)) 
@@ -183,7 +183,7 @@ while run:
         pygame.draw.rect(window, 'green' , (55 , 5 , 40 , 30))
     #making a score board
     font = pygame.font.SysFont('New times roman', 24)
-    app.text = font.render(f'level: {level}', True, 'white', '#000064')
+    app.text = font.render(f'LEVEL: {level}', True, 'white', '#000064')
     window.blit(app.text , (100,375))
 
     pygame.display.flip()
