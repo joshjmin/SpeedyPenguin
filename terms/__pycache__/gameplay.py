@@ -1,3 +1,59 @@
+import pygame
+
+def difficulty():
+# Set up the window
+    pygame.init()
+    pygame.display.set_caption('Enter the Name of the game')
+    window = pygame.display.set_mode([300, 300])
+
+# Set up text module
+    pygame.font.init()
+    font = pygame.font.SysFont('New times roman', 16)
+
+# Define text
+    text = font.render('choose your difiulty', True, 'black', '#A5F2F3')
+    text_2 = font.render('easy(1) , normal(2) , hard(3)' , True , 'black' , '#A5F2F3')
+# Main loop
+    running = True
+    while running:
+
+    # Check events
+        for event in pygame.event.get():
+        # User clicks window close button
+            if event.type == pygame.QUIT:
+                exit()
+
+    # Draw shapes
+        pygame.draw.rect(window, '#A5F2F3', (0, 0, 300, 300))
+
+    # Draw text
+        window.blit(text, (10, 100))
+        window.blit(text_2 , (10,150))
+
+    #make the main charecter
+        pen = pygame.image.load('src/assets/penguin<3.png')
+        pen = pygame.transform.scale(pen , (150,150))
+        window.blit(pen , (150,150))
+
+        #quit if they press space
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_1]:
+            mode = 2
+            running = False
+        if keys[pygame.K_2]:
+            mode = 0
+            running = False
+        if keys[pygame.K_3]:
+            mode = -1
+            running = False
+    # Update the display
+        pygame.display.flip()
+
+# Quit the window
+    pygame.quit()
+
+difficulty()
+
 def game():
     #imports
     import pygame
@@ -8,6 +64,7 @@ def game():
     #start window and other starting actions
     pygame.init()
     window = pygame.display.set_mode((400, 400))
+    pygame.display.set_caption('Enter the Name of the game')
     clock = pygame.time.Clock()
     class App:
         pass
@@ -29,6 +86,7 @@ def game():
     app.middley = 330
     app.uperx = 500
     app.upery = 500
+    mode = 0
     leveling = False
 
     time = 0
@@ -42,22 +100,22 @@ def game():
 
     #definitions
     def flyer():
-        app.flyerx -= 4 + speed
+        app.flyerx -= 4 + speed - mode
         if app.flyerx < 150:
-            app.flyery -= 4 + speed
-            app.flyerx -= 2 + speed
+            app.flyery -= 4 + speed - mode
+            app.flyerx -= 2 + speed - mode
     def standerd():
-        app.standerdx -= 3 + speed
+        app.standerdx -= 3 + speed - mode
     def fast():
-        app.fastx -= 6 + speed
+        app.fastx -= 6 + speed - mode
     def diver():
         if app.divery <= 325:
-            app.divery += 3 +speed
-        app.diverx -= 2 + speed
+            app.divery += 3 +speed - mode
+        app.diverx -= 2 + speed - mode
         app.uperx = app.diverx 
         app.upery = app.divery - 30
     def middle():
-        app.middlex -= 3 + speed
+        app.middlex -= 3 + speed - mode
         app.uperx = app.middlex 
         app.upery = app.middley - 30
     def reset():

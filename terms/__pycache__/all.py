@@ -6,5 +6,4 @@ open_text()
 while playing:
     game()
     print('if you see this, its a good sign')
-    playing = False
 exit()

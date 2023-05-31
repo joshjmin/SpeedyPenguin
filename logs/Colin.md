@@ -60,3 +60,13 @@
 
 > **Problems/bugs noted:** (for the display screen) the screen is constantly flashing
 
+### Log for 2021-05-31
+
+> **Goals for today:** make a opening screen and look into dificulty settings and make a sorted file
+
+> **Accomplished:** made an opening screen and made a more sorted file
+
+> **Plans for next day:** make a difficulty setting
+
+> **Problems/bugs noted:** 
+
