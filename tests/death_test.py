@@ -7,6 +7,7 @@ from opening_text import open_text
 #make the new window
 open_text()
 
+
 #start window and other starting actions
 pygame.init()
 window = pygame.display.set_mode((400, 400))
