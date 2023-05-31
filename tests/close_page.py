@@ -37,7 +37,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-        pygame.draw.rect(death)
+   pygame.draw.rect(death)
     
 pygame.quit()
    

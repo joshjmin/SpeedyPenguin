@@ -78,6 +78,7 @@ def game():
         app.upery = 500
         speed = 0
         sleep(1)
+        run = False
 
     #generate assets
     penguin = pygame.image.load('src/assets/penguin<3.png')    
@@ -217,7 +218,7 @@ def game():
         #drawings
         #TODO make animation for the walking of the main player
         #make the backround #TODO better
-        window.fill((0, 0, 64))
+        pygame.draw.rect(window , '#000064' , (0,0,400,400))
         #draw the charecters
         window.blit(penguin, (app.p_x - 30  , app.p_y - 30))
         window.blit (ice, (app.standerdx - 50  , app.standerdy - 35))

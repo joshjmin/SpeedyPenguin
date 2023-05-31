@@ -1,8 +1,10 @@
 from gameplay import game
 from opening_text import open_text
-running = True
+import random
+playing = True
 open_text()
-while running:
+while playing:
     game()
-    #add the other thing here
+    print('if you see this, its a good sign')
+    playing = False
 exit()
