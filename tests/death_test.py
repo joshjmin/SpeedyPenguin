@@ -2,48 +2,10 @@
 import pygame
 import random
 from time import sleep
-class App:
-    pass
-app = App()
+from opening_text import open_text
 
-def set_ping(event) -> None:
-    app.ping_pos = pygame.mouse.get_pos()    
-
-def opening_screen():
-
-# Set up the window
-    pygame.init()
-    pygame.display.set_caption('press the button to play')
-    app.ping_pos = [0,0]
-   
-#opening screen
-    running = True
-    while running:
-        window = pygame.display.set_mode([200, 200])
-        pygame.draw.rect(window , 'gray' , (0,0,200,200))
-        font3 = pygame.font.SysFont('New times roman', 24)
-        app.text3 = font3.render(f'click me to play', True, '#0000FF', '#A5F2F3')
-        window.blit(app.text3 , (75,125))
-        
-        for event in pygame.event.get():
-
-        # User clicks window close button
-            if event.type == pygame.QUIT:
-                running = False
-        
-        # A mouse button is pressed down
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                set_ping(event)
-        print(app.ping_pos)
-        if app.ping_pos[0] > 70 and app.ping_pos[0] < 190 and app.ping_pos[1] < 111 and app.ping_pos[1] > 154:
-            running = False
-    # Update the display
-        pygame.display.flip()
-
-# Quit the window
-    pygame.quit()
-
-opening_screen()
+#make the new window
+open_text()
 
 #start window and other starting actions
 pygame.init()
@@ -53,8 +15,6 @@ class App:
     pass
 app = App()
 #making placements and terms
-
-
 air = 0
 app.p_x = 50
 app.p_y = 350
@@ -126,7 +86,7 @@ penguin = pygame.transform.scale(penguin , (50,50))
 ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
 ice = pygame.transform.scale(ice , (100,90 ))
 
-#main loop
+#main loop 
 while run:
     #ticks and frame data
     clock.tick(120)
@@ -146,7 +106,7 @@ while run:
             run = False 
 
     #reset the projectiles
-    if app.standerdx < 0:
+    if app.standerdx < -20:
         app.standerdx = 450
         com = 1
     if app.flyerx < -20:
