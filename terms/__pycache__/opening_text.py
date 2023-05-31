@@ -44,5 +44,3 @@ def open_text():
 # Quit the window
     pygame.quit()
 
-
-

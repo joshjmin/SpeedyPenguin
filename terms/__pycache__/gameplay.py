@@ -266,5 +266,3 @@ def game():
         pygame.display.flip()
     pygame.quit()
     exit()
-
-game()
