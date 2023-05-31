@@ -15,6 +15,7 @@ clock = pygame.time.Clock()
 class App:
     pass
 app = App()
+
 #making placements and terms
 air = 0
 app.p_x = 50
@@ -152,7 +153,7 @@ while run:
 
     #calculate air time to incrase the fall speed
     if app.p_y < 350:
-        air += 0.07
+        air += 0.13
     if app.p_y == 350:
         air = 0
     
