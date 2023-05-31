@@ -7,7 +7,7 @@ def open_text():
 
 # Set up the window
     pygame.init()
-    pygame.display.set_caption('My very first pygame GUI')
+    pygame.display.set_caption('Enter the Name of the game')
     window = pygame.display.set_mode([300, 300])
 
 # Set up text module
@@ -34,6 +34,12 @@ def open_text():
         window.blit(text, (10, 100))
         window.blit(text_2 , (10,150))
 
+    #make the main charecter
+        pen = pygame.image.load('src/assets/penguin<3.png')
+        pen = pygame.transform.scale(pen , (150,150))
+        window.blit(pen , (150,150))
+
+        #quit if they press space
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE]:
             running = False
@@ -43,4 +49,3 @@ def open_text():
 
 # Quit the window
     pygame.quit()
-

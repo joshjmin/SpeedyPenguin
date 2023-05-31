@@ -102,7 +102,7 @@ def game():
         #check if they quit
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                run = False 
+                exit()
 
         #reset the projectiles
         if app.standerdx < -20:
