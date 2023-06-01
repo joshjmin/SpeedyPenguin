@@ -28,7 +28,7 @@ def open_text():
                 exit()
 
     # Draw shapes
-        pygame.draw.rect(window, '#A5F2F3', (0, 0, 300, 300))
+        pygame.draw.rect(window, '#A5F2F3', (0, 0, 400, 400))
 
     # Draw text
         window.blit(text, (10, 100))
