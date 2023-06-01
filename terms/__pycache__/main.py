@@ -4,4 +4,4 @@ playing = True
 open_text()
 while playing:
     gameplay()
-exit()
+ 

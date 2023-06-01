@@ -8,7 +8,7 @@ def open_text():
 # Set up the window
     pygame.init()
     pygame.display.set_caption('Speedy Penguin')
-    window = pygame.display.set_mode([300, 300])
+    window = pygame.display.set_mode([400, 400])
 
 # Set up text module
     pygame.font.init()
