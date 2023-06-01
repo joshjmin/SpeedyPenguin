@@ -1,58 +1,39 @@
 import pygame
-import sys
-
 
 pygame.init()
-running = True 
-width= 400 
-height = 400 
-window = pygame.display.set_mode((width, height))
+pygame.display.set_caption('Speedy Penguin DEATH')
+window = pygame.display.set_mode([300, 300])
+
+pygame.font.init()
+font = pygame.font.SysFont('New times roman', 24)
+
+score = font.render('Score is:', True, 'black', '#c91818')
+replay= font.render('Press space to play' , True , 'black' , '#c91818')
+death = font.render('YOU DIED', True, 'black', '#c91818')
+
+running = False
+
+while not running:
 
 
-def death():
+   for event in pygame.event.get():
+      if event.type == pygame.QUIT:
+          exit()
+
    
-   window.fill((255, 255, 255))
+   pygame.draw.rect(window, '#c91818', (0, 0, 300, 300))
 
-   font = pygame.font.SysFont('Times New Roman', 34)
+   window.blit(score, (10, 100))
+   window.blit(replay , (10,250))
+   window.blit(death, (100,50) )
 
-   death_text = font.render('Game Over', True, (0, 0, 0))
-
-   replay = font.render('Press space to replay ', True, (0, 0, 0)
-                        )
-   quit_button = font.render('Press x to quit', True, (0, 0, 0))
-
-   window.blit(death_text, (width/2 - death_text.get_width()/2, height/2 - death_text.get_height()/3))
-
-   window.blit(replay, (width/2 - replay.get_width()/2, height/1.9 + replay.get_height()))
-
-   window.blit(quit_button, (width/2 - quit_button.get_width()/2, height/2 + quit_button.get_height()/2))
-
-   pygame.display.update()
+   
+        #quit if they press space
+   keys = pygame.key.get_pressed()
+   if keys[pygame.K_SPACE]:
+       running = False
 
    pygame.display.flip()
 
-while running:
-   for event in pygame.event.get():
 
-        if event.type == pygame.QUIT:
-            running = False
-
-   pygame.draw.rect(death)
-    
 pygame.quit()
-   
-              
-
-   
-       
-           
-      
-  
-
-
-
-  
-
-
-
-
