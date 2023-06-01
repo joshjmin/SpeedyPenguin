@@ -60,5 +60,5 @@
 
 > **Plans for next day:** push new closing page 
 
-> **Problems/bugs noted:** none
+> **Problems/bugs noted:** none ^_^
 
