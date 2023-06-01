@@ -2,6 +2,11 @@
 import pygame
 import random
 from time import sleep
+from opening_text import open_text
+
+#make the new window
+open_text()
+
 
 #start window and other starting actions
 pygame.init()
@@ -10,9 +15,8 @@ clock = pygame.time.Clock()
 class App:
     pass
 app = App()
+
 #making placements and terms
-
-
 air = 0
 app.p_x = 50
 app.p_y = 350
@@ -53,8 +57,8 @@ def diver():
     if app.divery <= 325:
         app.divery += 3 +speed
     app.diverx -= 2 + speed
-    app.uperx = app.dx 
-    app.upery = app.dy - 30
+    app.uperx = app.diverx 
+    app.upery = app.divery - 30
 def middle():
     app.middlex -= 3 + speed
     app.uperx = app.middlex 
@@ -84,7 +88,7 @@ penguin = pygame.transform.scale(penguin , (50,50))
 ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
 ice = pygame.transform.scale(ice , (100,90 ))
 
-#main loop
+#main loop 
 while run:
     #ticks and frame data
     clock.tick(120)
@@ -104,7 +108,7 @@ while run:
             run = False 
 
     #reset the projectiles
-    if app.standerdx < 0:
+    if app.standerdx < -20:
         app.standerdx = 450
         com = 1
     if app.flyerx < -20:
@@ -133,9 +137,9 @@ while run:
             elif level >= 3:
                 a = random.randint(0,4)
             else:
-                a = random.randint(0,5)
+                a = random.randint(0,4)
         else:
-            a = random.randint(0,5)
+            a = random.randint(0,4)
     if a == 0:
         standerd()
     elif a == 2:
@@ -149,7 +153,7 @@ while run:
 
     #calculate air time to incrase the fall speed
     if app.p_y < 350:
-        air += 0.07
+        air += 0.13
     if app.p_y == 350:
         air = 0
     
@@ -157,7 +161,7 @@ while run:
     #keys means if a key is pressed
     keys = pygame.key.get_pressed()   
     #what to do if preseed
-    if keys[pygame.K_UP]:
+    if keys[pygame.K_UP] or keys[pygame.K_SPACE]  or keys[pygame.K_w]:
         if app.p_y < 50:
             pass
         elif time <= 20:
@@ -174,7 +178,7 @@ while run:
     if app.p_y > 350:
         app.p_y = 350
     
-    if keys[pygame.K_DOWN]:
+    if keys[pygame.K_DOWN] or keys[pygame.K_s]:
         if app.p_y < 349:
             pass
         else:
