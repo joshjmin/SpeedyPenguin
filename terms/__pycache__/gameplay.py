@@ -44,7 +44,7 @@ def difficulty(mode):
             return mode - 2
     # Update the display
         pygame.display.flip()
-
+    pygame.quit()
 # Quit the window
 
 def gameplay():
@@ -263,27 +263,21 @@ def gameplay():
 
         #check for collisions
         if app.p_x - app.standerdx < 25 and app.p_x - app.standerdx > -25 and app.p_y - app.standerdy < 25 and app.p_y - app.standerdy > -25:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.flyerx < 35 and app.p_x - app.flyerx > -35 and app.p_y - app.flyery < 35 and app.p_y - app.flyery > -35:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.fastx < 25 and app.p_x - app.fastx > -25 and app.p_y - app.fasty < 25 and app.p_y - app.fasty > -25:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.diverx < 25 and app.p_x - app.diverx > -25 and app.p_y - app.divery < 25 and app.p_y - app.divery > -25:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.middlex < 25 and app.p_x - app.middlex > -25 and app.p_y - app.middley < 25 and app.p_y - app.middley > -25:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.uperx < 25 and app.p_x - app.uperx > -25 and app.p_y - app.upery < 25 and app.p_y - app.upery > -25:
-            gtime = 0
             reset()
             active = False
 
