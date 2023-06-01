@@ -1,5 +1,6 @@
 def difficulty(mode):
     import pygame
+
 # Set up the window
     pygame.init()
     pygame.display.set_caption('Enter the Name of the game')
@@ -7,11 +8,15 @@ def difficulty(mode):
 
 # Set up text module
     pygame.font.init()
-    font = pygame.font.SysFont('New times roman', 16)
+    font = pygame.font.SysFont('New times roman', 25)
 
 # Define text
-    text = font.render('choose your difiulty', True, 'black', '#A5F2F3')
-    text_2 = font.render('easy(1) , normal(2) , hard(3)' , True , 'black' , '#A5F2F3')
+    text = font.render('CHOOSE THE DIFFICULTY:', True, 'black', '#A5F2F3')
+    text_2 = font.render('EASY = 1' , True , 'black' , '#A5F2F3')
+    text_3 = font.render('NORMAL = 2', True, 'black', '#A5F2F3')
+    text_4 = font.render('HARD = 3', True, 'black', '#A5F2F3')
+
+
 # Main loop
     running = True
     while running:
@@ -26,13 +31,15 @@ def difficulty(mode):
         pygame.draw.rect(window, '#A5F2F3', (0, 0, 400, 400))
 
     # Draw text
-        window.blit(text, (10, 100))
-        window.blit(text_2 , (10,150))
+        window.blit(text, (10, 60))
+        window.blit(text_2 , (10,120))
+        window.blit(text_3, (10, 160))
+        window.blit(text_4, (10, 200))
 
     #make the main charecter
         pen = pygame.image.load('src/assets/penguin<3.png')
-        pen = pygame.transform.scale(pen , (150,150))
-        window.blit(pen , (150,150))
+        pen = pygame.transform.scale(pen, (150,150))
+        window.blit(pen, (150,150))
 
         #quit if they press space
         keys = pygame.key.get_pressed()
@@ -46,7 +53,7 @@ def difficulty(mode):
         pygame.display.flip()
 
 # Quit the window
-
+    pygame.quit()
 
 
 
@@ -57,7 +64,6 @@ def gameplay():
     import pygame
     import random
     from time import sleep
-
 
     #start window and other starting actions
     pygame.init()
