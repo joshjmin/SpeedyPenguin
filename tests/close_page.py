@@ -2,7 +2,7 @@ import pygame
 
 pygame.init()
 pygame.display.set_caption('Speedy Penguin DEATH')
-window = pygame.display.set_mode([300, 300])
+window = pygame.display.set_mode([400, 400])
 
 pygame.font.init()
 font = pygame.font.SysFont('New times roman', 24)
@@ -21,11 +21,11 @@ while not running:
           exit()
 
    
-   pygame.draw.rect(window, '#c91818', (0, 0, 300, 300))
+   pygame.draw.rect(window, '#c91818', (0, 0, 400, 400))
 
-   window.blit(score, (10, 100))
-   window.blit(replay , (10,250))
-   window.blit(death, (100,50) )
+   window.blit(score,  (10, 150))
+   window.blit(replay, (10,350))
+   window.blit(death,  (150,50) )
 
    
         #quit if they press space

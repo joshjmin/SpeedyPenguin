@@ -40,4 +40,44 @@
 
 > **Plans for next scrum:** fix image size 
 
+### Meeting of 2023-05-26
+
+> **Present:** Josh, Colin, Julia, Dina  
+
+> **Project status:** Fixed Jumping speed, created levels
+
+> **New items/bug reports:** Josh and Julia cannot open game 
+
+> **Plans for next scrum:** fix opening error  
+
+### Meeting of 2023-05-29
+
+> **Present:** Josh, Colin, Julia, Dina  
+
+> **Project status:** revised code, fix basic code 
+
+> **New items/bug reports:** none 
+
+> **Plans for next scrum:** make characters 
+
+### Meeting of 2023-05-30
+
+> **Present:** Josh, Colin, Julia, Dina  
+
+> **Project status:** Made char and opening and closing screen function 
+
+> **New items/bug reports:** weird opening screen issue 
+
+> **Plans for next scrum:** fix opening screen, finish closing screen make more char drawing for different positions 
+
+### Meeting of 2023-05-31
+
+> **Present:** Colin, Julia
+
+> **Project status:** fixed opening screen, cleaned up the files and made a main file 
+
+> **New items/bug reports:** closing screen flashing then closing 
+
+> **Plans for next scrum:** draw more characters, settings for level, sounds, fix closing
+
 
