@@ -8,7 +8,7 @@ def open_text():
 # Set up the window
     pygame.init()
     pygame.display.set_caption('Enter the Name of the game')
-    window = pygame.display.set_mode([300, 300])
+    window = pygame.display.set_mode([400, 400])
 
 # Set up text module
     pygame.font.init()
@@ -28,7 +28,7 @@ def open_text():
                 exit()
 
     # Draw shapes
-        pygame.draw.rect(window, '#A5F2F3', (0, 0, 300, 300))
+        pygame.draw.rect(window, '#A5F2F3', (0, 0, 400, 400))
 
     # Draw text
         window.blit(text, (10, 100))
