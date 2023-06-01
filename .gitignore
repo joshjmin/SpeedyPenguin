@@ -1,3 +1,2 @@
-*DS_STORE*
-*cpython*
-*__pycache__*
+*.DS_STORE
+*.pyc

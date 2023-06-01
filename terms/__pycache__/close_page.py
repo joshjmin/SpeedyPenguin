@@ -19,7 +19,7 @@ def death():
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                exit()
+             exit()
 
     
     pygame.draw.rect(window, '#998484', (0, 0, 400, 400))
@@ -33,7 +33,7 @@ def death():
             #quit if they press space
     keys = pygame.key.get_pressed()
     if keys[pygame.K_SPACE]:
-        running = False
+        running = True
 
     pygame.display.flip()
 

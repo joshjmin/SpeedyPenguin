@@ -80,6 +80,7 @@
 
 > **Plans for next scrum:** draw more characters, settings for level, sounds, fix closing
 
+<<<<<<< HEAD
 **Present:** Colin, Julia, Josh, Dina 
 
 > **Project status:** closing screen finsihed, more drawings finsished 
@@ -88,5 +89,16 @@
 
 > **Plans for next scrum:** draw more characters, settings for level, sounds, fix closing
 
+=======
+ ### Meeting of 2023-06-1
+
+**Present:** Colin, Julia, Josh, Dina 
+
+> **Project status:** closing screen finsihed, more drawings finsished, resized opening screen, added sliding and flying 
+
+> **New items/bug reports:** no group bugs :-:
+
+> **Plans for next scrum:** sounds, pictures 
+>>>>>>> b5cd6aa106c7cd88b1aeb93c9de5ffb4002d3ccc
 
 

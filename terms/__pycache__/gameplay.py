@@ -3,7 +3,7 @@ def difficulty(mode):
 
 # Set up the window
     pygame.init()
-    pygame.display.set_caption('Enter the Name of the game')
+    pygame.display.set_caption('Speedy Penguin')
     window = pygame.display.set_mode([400, 400])
 
 # Set up text module
@@ -51,13 +51,16 @@ def difficulty(mode):
             return mode - 2
     # Update the display
         pygame.display.flip()
-
+    pygame.quit()
 # Quit the window
+<<<<<<< HEAD
     pygame.quit()
 
 
 
 
+=======
+>>>>>>> b5cd6aa106c7cd88b1aeb93c9de5ffb4002d3ccc
 
 def gameplay():
     #imports
@@ -152,6 +155,10 @@ def gameplay():
     #generate assets
     penguin = pygame.image.load('src/assets/penguin<3.png')    
     penguin = pygame.transform.scale(penguin , (50,50))
+    penguin_jump = pygame.image.load('src/assets/flyingpenguin(pink).png')
+    penguin_jump = pygame.transform.scale(penguin_jump , (60 , 60))
+    penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
+    penguin_slide = pygame.transform.scale(penguin_slide , (40,40))
     ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
     ice = pygame.transform.scale(ice , (100,90 ))
     active = True
@@ -270,27 +277,21 @@ def gameplay():
 
         #check for collisions
         if app.p_x - app.standerdx < 25 and app.p_x - app.standerdx > -25 and app.p_y - app.standerdy < 25 and app.p_y - app.standerdy > -25:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.flyerx < 35 and app.p_x - app.flyerx > -35 and app.p_y - app.flyery < 35 and app.p_y - app.flyery > -35:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.fastx < 25 and app.p_x - app.fastx > -25 and app.p_y - app.fasty < 25 and app.p_y - app.fasty > -25:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.diverx < 25 and app.p_x - app.diverx > -25 and app.p_y - app.divery < 25 and app.p_y - app.divery > -25:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.middlex < 25 and app.p_x - app.middlex > -25 and app.p_y - app.middley < 25 and app.p_y - app.middley > -25:
-            gtime = 0
             reset()
             active = False
         if app.p_x - app.uperx < 25 and app.p_x - app.uperx > -25 and app.p_y - app.upery < 25 and app.p_y - app.upery > -25:
-            gtime = 0
             reset()
             active = False
 
@@ -299,7 +300,13 @@ def gameplay():
         #make the backround #TODO better
         pygame.draw.rect(window , '#000064' , (0,0,400,400))
         #draw the charecters
-        window.blit(penguin, (app.p_x - 30  , app.p_y - 30))
+        if motion == 'standing':
+            window.blit(penguin, (app.p_x - 30  , app.p_y - 30))
+        elif motion == 'jumping':
+            window.blit(penguin_jump , (app.p_x - 30 , app.p_y - 30))
+        else:
+            window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
+
         window.blit (ice, (app.standerdx - 50  , app.standerdy - 35))
         pygame.draw.circle(window, 'green' , (app.fastx , app.fasty) , 20)
         pygame.draw.circle(window, 'purple' , (app.flyerx , app.flyery) , 20)
