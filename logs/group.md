@@ -80,4 +80,13 @@
 
 > **Plans for next scrum:** draw more characters, settings for level, sounds, fix closing
 
+**Present:** Colin, Julia, Josh, Dina 
+
+> **Project status:** closing screen finsihed, more drawings finsished 
+
+> **New items/bug reports:** closing screen flashing then closing 
+
+> **Plans for next scrum:** draw more characters, settings for level, sounds, fix closing
+
+
 

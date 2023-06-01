@@ -41,3 +41,24 @@
 > **Plans for next day:** Find out why Josh and I cannot open the game 
 
 > **Problems/bugs noted:** game not opening, opens for a second and then closes 
+
+### Log for 2023-05-30
+
+> **Goals for today:** Continue and improve code start closing 
+
+> **Accomplished:**  fixed levels and speed
+
+> **Plans for next day:** finish closing 
+
+> **Problems/bugs noted:** none
+
+### Log for 2023-05-31
+
+> **Goals for today:** restart closing page 
+
+> **Accomplished:**  added mode and start screen 
+
+> **Plans for next day:** push new closing page 
+
+> **Problems/bugs noted:** none ^_^
+
