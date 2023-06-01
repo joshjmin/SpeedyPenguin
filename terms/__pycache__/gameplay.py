@@ -85,7 +85,7 @@ def gameplay():
     app.middley = 330
     app.uperx = 500
     app.upery = 500
-    leveling = False
+    leveling = True
 
     time = 0
     gtime = 0
@@ -190,19 +190,14 @@ def gameplay():
         #making the projictle move and projectile movement
         if com == 1:
             com = 0
-            if leveling == True:
-                if level == 1:
-                    a = random.randint(0,1)
-                elif level == 2:
-                    a = random.randint(0,2)
-                elif level >= 3:
-                    a = random.randint(0,4)
-                else:
-                    a = random.randint(0,4)
-            else:
+            if level == 1:
+                a = random.randint(0,1)
+            elif level == 2:
+                a = random.randint(0,2)
+            elif level >= 3:
                 a = random.randint(0,4)
         if a == 0:
-            app.fastx -= 3 + speed - mode
+            app.standerdx -= 3 + speed - mode
         elif a == 2:
             app.fastx -= 6 + speed - mode
         elif a == 3:
