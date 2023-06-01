@@ -7,9 +7,9 @@ window = pygame.display.set_mode([400, 400])
 pygame.font.init()
 font = pygame.font.SysFont('New times roman', 35)
 
-death = font.render('YOU DIED', True, 'black', '#c91818')
-score = font.render('Score is:', True, 'black', '#c91818')
-replay= font.render('Press space to play' , True , 'black' , '#c91818')
+death = font.render('YOU DIED', True, 'black', '#998484')
+score = font.render('Score is:', True, 'black', '#998484')
+replay= font.render('Press space to play' , True , 'black' , '#998484')
 
 running = False 
 
@@ -21,7 +21,7 @@ while not running:
           exit()
 
    
-   pygame.draw.rect(window, '#c91818', (0, 0, 400, 400))
+   pygame.draw.rect(window, '#998484', (0, 0, 400, 400))
 
    window.blit(death,  (135,50) )
    window.blit(score,  (10, 150))
