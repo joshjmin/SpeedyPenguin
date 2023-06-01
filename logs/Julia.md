@@ -62,3 +62,14 @@
 
 > **Problems/bugs noted:** none ^_^
 
+### Log for 2023-06-1
+
+> **Goals for today:** look for sound effects and push closing page 
+
+> **Accomplished:**  pushed closing page
+
+> **Plans for next day:** look for sound effects 
+
+> **Problems/bugs noted:** many mostly being cannot push because of random files 
+
+
