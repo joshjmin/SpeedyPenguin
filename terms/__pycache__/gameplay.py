@@ -53,14 +53,7 @@ def difficulty(mode):
         pygame.display.flip()
     pygame.quit()
 # Quit the window
-<<<<<<< HEAD
     pygame.quit()
-
-
-
-
-=======
->>>>>>> b5cd6aa106c7cd88b1aeb93c9de5ffb4002d3ccc
 
 def gameplay():
     #imports
