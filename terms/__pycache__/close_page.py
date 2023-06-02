@@ -1,5 +1,4 @@
 import pygame
-
 def death():
     pygame.init()
     pygame.display.set_caption('Speedy Penguin DEATH')
