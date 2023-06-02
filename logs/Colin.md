@@ -70,3 +70,13 @@
 
 > **Problems/bugs noted:** 
 
+### Log for 2021-06-2
+
+> **Goals for today:** have a way to display the score at the end screen, change the imiges for the charecter, change the charecter for all the opening screens and give them an animation as they do this
+
+> **Accomplished:** all of the apove
+
+> **Plans for next day:** receve and add the imige on the final death screen and make any quality of life changes
+
+> **Problems/bugs noted:** charge could be used without any motion upword if they press up while hold down, to fix; I changed it so you can recover energy as you slide
+
