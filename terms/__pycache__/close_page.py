@@ -17,7 +17,6 @@ def death():
 
     while not running:
 
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 exit()
@@ -29,7 +28,7 @@ def death():
         window.blit(score,  (10, 150))
         window.blit(replay, (10,350))
     
-
+        #add the penguin art here
     
             #quit if they press space
         keys = pygame.key.get_pressed()

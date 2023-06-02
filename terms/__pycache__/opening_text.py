@@ -2,7 +2,7 @@ import pygame
 class App:
     pass
 app = App()
-
+clock = pygame.time.Clock()
 def open_text():
 
 # Set up the window
@@ -20,8 +20,21 @@ def open_text():
     text_3 = font.render('Press SPACE to Play' , True , 'black', '#A5F2F3')
 # Main loop
     running = True
+    frame = 1
+    going = 'up'
     while running:
+        clock.tick(120)
+        if frame < 0:
+            frame += 0.3
+            going = 'up'
+        if frame > 50:
+            frame -= 0.3
+            going = 'down'
 
+        if going == 'up':
+            frame += 0.3
+        elif going == 'down':
+            frame -= 0.3
     # Check events
         for event in pygame.event.get():
         # User clicks window close button
@@ -37,9 +50,9 @@ def open_text():
         window.blit(text_3, (10,160))
 
     #make the main charecter
-        pen = pygame.image.load('src/assets/penguin<3.png')
+        pen = pygame.image.load('src/assets/flyingpenguin(pink).png')
         pen = pygame.transform.scale(pen, (150,150))
-        window.blit(pen, (150,150))
+        window.blit(pen, (50 + frame , 170 + frame))
 
         #quit if they press space
         keys = pygame.key.get_pressed()
