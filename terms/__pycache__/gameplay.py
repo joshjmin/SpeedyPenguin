@@ -1,4 +1,4 @@
-def difficulty(mode):
+def difficulty():
     import pygame
 
 # Set up the window
@@ -44,15 +44,13 @@ def difficulty(mode):
         #quit if they press space
         keys = pygame.key.get_pressed()
         if keys[pygame.K_1]:
-            return mode + 1
+            return 1
         if keys[pygame.K_2]:
-            return mode
+            return 0
         if keys[pygame.K_3]:
-            return mode - 2
+            return -2
     # Update the display
         pygame.display.flip()
-    pygame.quit()
-# Quit the window
     pygame.quit()
 
 def gameplay():
@@ -98,7 +96,7 @@ def gameplay():
     motion = 'standing'
     frame = 0
     mode = 0
-    mode = difficulty(mode)
+    mode = difficulty()
     def reset():
         sleep(1)
         air = 0
