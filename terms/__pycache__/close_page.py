@@ -11,8 +11,13 @@ def death():
 
     death = font.render('YOU DIED', True, 'black', '#998484')
     score = font.render(f'Score is: {score}', True, 'black', '#998484')
+<<<<<<< HEAD
     replay= font.render('Press SPACE to Play' , True , 'black' , '#998484')
     quiting = font.render('Press Q to Quit' , True , 'black' , '#998484')
+=======
+    replay= font.render('Press space to play again' , True , 'black' , '#998484')
+    quiting = font.render('Press Q to quit' , True , 'black' , '#998484')
+>>>>>>> cf719d286f180ee81d3cb8fdf0af220321e916f6
 
     running = False 
 
