@@ -119,7 +119,7 @@ def gameplay():
     
     ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
     ice = pygame.transform.scale(ice , (100,90 ))
-    ice2 = pygame.image.load('src/assets/penguin_standing.png')    
+    ice2 = pygame.image.load('src/assets/isicle.png')    
     ice2 = pygame.transform.scale(ice2 , (40,50))
     active = True
     #main loop 
