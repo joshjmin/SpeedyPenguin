@@ -77,3 +77,22 @@ ABSENT
 > **Plans for next day:** continue to adjust and add sound; and organize the files
 
 > **Problems/bugs noted:** syncing problems; but got them fixed
+
+### Log for 2023-06-02
+ABSENT
+> **Goals for today:** 
+
+> **Accomplished:** 
+
+> **Plans for next day:** 
+
+### Log for 2023-06-01
+
+> **Goals for today:** continue to add opening screen and sound
+
+> **Accomplished:** adjusted the font and style of the opening code
+
+> **Plans for next day:** continue to adjust and add sound; and organize the files
+
+> **Problems/bugs noted:** syncing problems; but got them fixed
+
