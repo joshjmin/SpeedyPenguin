@@ -90,4 +90,14 @@
 
 > **Plans for next scrum:** sounds, pictures 
 
+## Meeting of 2023-06-5
+
+**Present:** Colin, Julia, Josh, Dina 
+
+> **Project status:** completed a title page 
+
+> **New items/bug reports:** no group bugs :-:
+
+> **Plans for next scrum:** sounds, pictures 
+
 

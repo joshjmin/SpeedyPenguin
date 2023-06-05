@@ -62,8 +62,6 @@
 
 > **Problems/bugs noted:** none ^_^
 
-<<<<<<< HEAD
-=======
 ### Log for 2023-06-1
 
 > **Goals for today:** look for sound effects and push closing page 
@@ -74,5 +72,14 @@
 
 > **Problems/bugs noted:** many mostly being cannot push because of random files 
 
+### Log for 2023-06-5
 
->>>>>>> b5cd6aa106c7cd88b1aeb93c9de5ffb4002d3ccc
+> **Goals for today:** make notes for code explaing what it doesn
+
+> **Accomplished:**  made notes 
+
+> **Plans for next day:** finish organizing code 
+
+> **Problems/bugs noted:** 3rd opening sliding penguin moves fasted on my computer but it is not a bug, just computer speed 
+
+
