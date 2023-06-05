@@ -80,3 +80,10 @@
 
 > **Problems/bugs noted:** charge could be used without any motion upword if they press up while hold down, to fix; I changed it so you can recover energy as you slide
 
+### Log for 2021-06-05
+
+> **Goals for today:** add new charecters basde on the level and fix some bugs and formating; add charecter modles to projectiles
+
+> **Accomplished:** all but new charecter modles
+
+> **Plans for next day:** add charecter modles

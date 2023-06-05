@@ -119,8 +119,9 @@ def gameplay():
     
     ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
     ice = pygame.transform.scale(ice , (100,90 ))
-    ice2 = pygame.image.load('src/assets/penguin_standing.png')    
-    ice2 = pygame.transform.scale(ice2 , (40,50))
+    ice2 = pygame.image.load('src/assets/isicle.png')    
+    ice2 = pygame.transform.scale(ice2 , (30,30))
+    ice2 = pygame.transform.rotate(ice2 , 270)
     active = True
     #main loop 
     while active:
@@ -267,13 +268,14 @@ def gameplay():
         else:
             window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
 
-        window.blit (ice, (app.standerdx - 50  , app.standerdy - 35))
-        window.blit(ice , (app.fastx , app.fasty))
-        window.blit(ice , (app.flyerx - 50, app.flyery - 60))
-        window.blit(ice , (app.diverx , app.divery))
-        window.blit(ice , (app.diverx - 50, app.divery - 60))
-        window.blit(ice , (app.middlex , app.middley))
-        window.blit(ice , (app.middlex - 50, app.middley - 60))
+        window.blit (ice, (app.standerdx - 30  , app.standerdy - 35))
+        window.blit(ice2 , (app.fastx , app.fasty - 45))
+        window.blit(ice2 , (app.flyerx - 30, app.flyery - 45))
+        window.blit(ice2 , (app.diverx - 40 , app.divery - 45))
+        window.blit(ice2 , (app.diverx - 30, app.divery - 45))
+        window.blit(ice2 , (app.middlex - 30, app.middley - 45))
+        window.blit(ice2 , (app.middlex - 30, app.middley - 45))
+        window.blit(ice2 , (app.uperx - 30, app.upery - 45))
 
         pygame.draw.circle(window, 'green' , (app.fastx , app.fasty) , 20)
         pygame.draw.circle(window, 'purple' , (app.flyerx , app.flyery) , 20)
