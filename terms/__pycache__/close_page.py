@@ -46,10 +46,12 @@ def death():
         dead = pygame.transform.scale(dead , (150,130))
         window.blit(dead , (200 , 200))
     
-        #quit if they press space
+        #resume game if space is pressed 
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE]:
             running = True
+            
+        #quit game if q is pressed 
         keys = pygame.key.get_pressed()
         if keys[pygame.K_q]:
             exit()
