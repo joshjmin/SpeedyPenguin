@@ -12,6 +12,7 @@ def death():
     death = font.render('YOU DIED', True, 'black', '#998484')
     score = font.render(f'Score is: {score}', True, 'black', '#998484')
     replay= font.render('Press space to play' , True , 'black' , '#998484')
+    quiting = font.render('Press q to quit' , True , 'black' , '#998484')
 
     running = False 
 
@@ -27,13 +28,19 @@ def death():
         window.blit(death,  (135,50) )
         window.blit(score,  (10, 150))
         window.blit(replay, (10,350))
+        window.blit(quiting , (10 , 250))
     
-        #add the penguin art here
+        dead = pygame.image.load('src/assets/dizzy_penguin.png')
+        dead = pygame.transform.scale(dead , (150,130))
+        window.blit(dead , (200 , 200))
     
             #quit if they press space
         keys = pygame.key.get_pressed()
         if keys[pygame.K_SPACE]:
             running = True
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_q]:
+            exit()
 
         pygame.display.flip()
 
