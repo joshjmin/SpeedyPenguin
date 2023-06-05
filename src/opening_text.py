@@ -1,4 +1,5 @@
 import pygame
+
 class App:
     pass
 app = App()
