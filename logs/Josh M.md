@@ -86,13 +86,13 @@ ABSENT
 
 > **Plans for next day:** 
 
-### Log for 2023-06-01
+### Log for 2023-06-05
 
-> **Goals for today:** continue to add opening screen and sound
+> **Goals for today:** add details, create new page, add sound
 
-> **Accomplished:** adjusted the font and style of the opening code
+> **Accomplished:** adjusted sizes and font of text, added a new title window
 
-> **Plans for next day:** continue to adjust and add sound; and organize the files
+> **Plans for next day:** add sound to the game and add images for the obstacles
 
-> **Problems/bugs noted:** syncing problems; but got them fixed
+> **Problems/bugs noted:** had trouble with pushing new title
 
