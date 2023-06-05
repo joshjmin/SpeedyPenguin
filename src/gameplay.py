@@ -119,6 +119,8 @@ def gameplay():
     
     ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
     ice = pygame.transform.scale(ice , (100,90 ))
+    ice2 = pygame.image.load('src/assets/penguin_standing.png')    
+    ice2 = pygame.transform.scale(ice2 , (40,50))
     active = True
     #main loop 
     while active:
@@ -179,7 +181,7 @@ def gameplay():
         elif a == 4:
             if app.divery <= 325:
                 app.divery += 3 + speed - mode
-            app.diverx -= 2 - mode
+            app.diverx -= 4 - mode
             app.uperx = app.diverx 
             app.upery = app.divery - 30
         elif a == 1:
@@ -266,6 +268,12 @@ def gameplay():
             window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
 
         window.blit (ice, (app.standerdx - 50  , app.standerdy - 35))
+        window.blit(ice , (app.fastx , app.fasty))
+        window.blit(ice , (app.flyerx - 50, app.flyery - 60))
+        window.blit(ice , (app.diverx , app.divery))
+        window.blit(ice , (app.diverx - 50, app.divery - 60))
+        window.blit(ice , (app.middlex , app.middley))
+        window.blit(ice , (app.middlex - 50, app.middley - 60))
 
         pygame.draw.circle(window, 'green' , (app.fastx , app.fasty) , 20)
         pygame.draw.circle(window, 'purple' , (app.flyerx , app.flyery) , 20)
@@ -276,6 +284,7 @@ def gameplay():
             pygame.draw.circle(window , 'brown' , (app.uperx , app.upery) , 20)
         elif app.uperx == app.diverx:
             pygame.draw.circle(window , 'yellow' , (app.uperx , app.upery) , 20)
+        
 
         #jump meter
         pygame.draw.rect(window , 'gray' , (0,0, 100 , 40))
