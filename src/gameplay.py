@@ -161,11 +161,11 @@ def gameplay():
         penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
         penguin_slide = pygame.transform.scale(penguin_slide , (40,40))
     elif mode == 0:
-        penguin = pygame.image.load('src/assets/penguin_standing.png')    
+        penguin = pygame.image.load('src/assets/penguin_standing(normal).png')    
         penguin = pygame.transform.scale(penguin , (40,50))
-        penguin_jump = pygame.image.load('src/assets/flyingpenguin(hard).png')
+        penguin_jump = pygame.image.load('src/assets/flyingpenguin(normal).png')
         penguin_jump = pygame.transform.scale(penguin_jump , (50 , 50))
-        penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
+        penguin_slide = pygame.image.load('src/assets/penguin_sliding(normal).png')
         penguin_slide = pygame.transform.scale(penguin_slide , (40,40))
     else:
         penguin = pygame.image.load('src/asset/penguin_standing(hard).png')    
