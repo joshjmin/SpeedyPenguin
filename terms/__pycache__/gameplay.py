@@ -1,4 +1,9 @@
-def difficulty(mode):
+class App:
+    pass
+app = App()
+import pygame
+def difficulty():
+
     import pygame
 
 # Set up the window
@@ -19,8 +24,12 @@ def difficulty(mode):
 
 # Main loop
     running = True
+    app.penx = -100
+    app.peny = 300
     while running:
-
+        app.penx += 5
+        if app.penx >= 1000:
+            app.penx = -100
     # Check events
         for event in pygame.event.get():
         # User clicks window close button
@@ -37,22 +46,20 @@ def difficulty(mode):
         window.blit(text_4, (10, 200))
 
     #make the main charecter
-        pen = pygame.image.load('src/assets/penguin<3.png')
-        pen = pygame.transform.scale(pen, (150,150))
-        window.blit(pen, (150,150))
+        pen = pygame.image.load('src/assets/penguin_sliding(pink).png')
+        pen = pygame.transform.scale(pen, (120,100))
+        window.blit(pen, (app.penx,app.peny))
 
         #quit if they press space
         keys = pygame.key.get_pressed()
         if keys[pygame.K_1]:
-            return mode + 1
+            return 1
         if keys[pygame.K_2]:
-            return mode
+            return 0
         if keys[pygame.K_3]:
-            return mode - 2
+            return -2
     # Update the display
         pygame.display.flip()
-    pygame.quit()
-# Quit the window
     pygame.quit()
 
 def gameplay():
@@ -98,7 +105,7 @@ def gameplay():
     motion = 'standing'
     frame = 0
     mode = 0
-    mode = difficulty(mode)
+    mode = difficulty()
     def reset():
         sleep(1)
         air = 0
@@ -146,12 +153,28 @@ def gameplay():
         app.upery = app.middley - 30
 
     #generate assets
-    penguin = pygame.image.load('src/assets/penguin<3.png')    
-    penguin = pygame.transform.scale(penguin , (50,50))
-    penguin_jump = pygame.image.load('src/assets/flyingpenguin(pink).png')
-    penguin_jump = pygame.transform.scale(penguin_jump , (60 , 60))
-    penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
-    penguin_slide = pygame.transform.scale(penguin_slide , (40,40))
+    if mode == 1:
+        penguin = pygame.image.load('src/assets/penguin_standing.png')    
+        penguin = pygame.transform.scale(penguin , (40,50))
+        penguin_jump = pygame.image.load('src/assets/flyingpenguin(pink).png')
+        penguin_jump = pygame.transform.scale(penguin_jump , (50 , 50))
+        penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
+        penguin_slide = pygame.transform.scale(penguin_slide , (40,40))
+    elif mode == 0:
+        penguin = pygame.image.load('src/assets/penguin_standing.png')    
+        penguin = pygame.transform.scale(penguin , (40,50))
+        penguin_jump = pygame.image.load('src/assets/flyingpenguin(pink).png')
+        penguin_jump = pygame.transform.scale(penguin_jump , (50 , 50))
+        penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
+        penguin_slide = pygame.transform.scale(penguin_slide , (40,40))
+    else:
+        penguin = pygame.image.load('src/assets/penguin_standing.png')    
+        penguin = pygame.transform.scale(penguin , (40,50))
+        penguin_jump = pygame.image.load('src/assets/flyingpenguin(pink).png')
+        penguin_jump = pygame.transform.scale(penguin_jump , (50 , 50))
+        penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
+        penguin_slide = pygame.transform.scale(penguin_slide , (40,40))
+    
     ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
     ice = pygame.transform.scale(ice , (100,90 ))
     active = True
@@ -213,8 +236,8 @@ def gameplay():
                 app.flyerx -= 2 + speed - mode
         elif a == 4:
             if app.divery <= 325:
-                app.divery += 3 +speed - mode
-            app.diverx -= 2 + speed - mode
+                app.divery += 3 + speed - mode
+            app.diverx -= 2 - mode
             app.uperx = app.diverx 
             app.upery = app.divery - 30
         elif a == 1:
@@ -264,29 +287,29 @@ def gameplay():
             motion = 'standing'
 
         #recahrge jump power
-        if app.p_y  == 350:
+        if app.p_y  >= 350:
             if time > 0:
                 time -= 1
 
         #check for collisions
         if app.p_x - app.standerdx < 25 and app.p_x - app.standerdx > -25 and app.p_y - app.standerdy < 25 and app.p_y - app.standerdy > -25:
             reset()
-            active = False
+            return gtime
         if app.p_x - app.flyerx < 35 and app.p_x - app.flyerx > -35 and app.p_y - app.flyery < 35 and app.p_y - app.flyery > -35:
             reset()
-            active = False
+            return gtime
         if app.p_x - app.fastx < 25 and app.p_x - app.fastx > -25 and app.p_y - app.fasty < 25 and app.p_y - app.fasty > -25:
             reset()
-            active = False
+            return gtime
         if app.p_x - app.diverx < 25 and app.p_x - app.diverx > -25 and app.p_y - app.divery < 25 and app.p_y - app.divery > -25:
             reset()
-            active = False
+            return gtime
         if app.p_x - app.middlex < 25 and app.p_x - app.middlex > -25 and app.p_y - app.middley < 25 and app.p_y - app.middley > -25:
             reset()
-            active = False
+            return gtime
         if app.p_x - app.uperx < 25 and app.p_x - app.uperx > -25 and app.p_y - app.upery < 25 and app.p_y - app.upery > -25:
             reset()
-            active = False
+            return gtime
 
         #drawings
         #TODO make animation for the walking of the main player
@@ -301,6 +324,7 @@ def gameplay():
             window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
 
         window.blit (ice, (app.standerdx - 50  , app.standerdy - 35))
+
         pygame.draw.circle(window, 'green' , (app.fastx , app.fasty) , 20)
         pygame.draw.circle(window, 'purple' , (app.flyerx , app.flyery) , 20)
         pygame.draw.rect(window, '#A5F2F3', (0, 365, 400, 400))

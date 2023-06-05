@@ -93,3 +93,74 @@
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
 
+***********************************
+# INSTRUCTIONS FOR THE INDIVIDUAL LOG
+* First, copy this and save it with your name. For example: `jacob.md`.
+* EACH PERSON must update THEIR OWN file at the end of each class.
+* Copy and paste the template below, and fill in the data.
+* Then commit & push it.
+
+## TEMPLATE (don't change, just copy and update)
+
+### Log for 2021-05-30
+
+> **Goals for today:** Absent
+
+> **Accomplished:** Absent
+
+> **Plans for next day:** Absent 
+
+> **Problems/bugs noted:** Absent 
+
+> **Other notes:** 
+
+## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+********************************
+# INSTRUCTIONS FOR THE INDIVIDUAL LOG
+* First, copy this and save it with your name. For example: `jacob.md`.
+* EACH PERSON must update THEIR OWN file at the end of each class.
+* Copy and paste the template below, and fill in the data.
+* Then commit & push it.
+
+## TEMPLATE (don't change, just copy and update)
+
+### Log for 2021-06-1
+
+> **Goals for today:** Absent (fix this)
+
+> **Accomplished:** Absent
+
+> **Plans for next day:** Absent 
+
+> **Problems/bugs noted:** Absent 
+
+> **Other notes:** 
+
+## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+
+
+***********************************
+# INSTRUCTIONS FOR THE INDIVIDUAL LOG
+* First, copy this and save it with your name. For example: `jacob.md`.
+* EACH PERSON must update THEIR OWN file at the end of each class.
+* Copy and paste the template below, and fill in the data.
+* Then commit & push it.
+
+## TEMPLATE (don't change, just copy and update)
+
+### Log for 2021-06-2
+
+> **Goals for today:** Learn how to upload the character drawings into the code, and do more character drawings 
+
+> **Accomplished:** Finished one more character drawing. 
+
+> **Plans for next day:** Upload drawings into vs code. 
+
+> **Problems/bugs noted:** Problems with VS code not working. 
+
+> **Other notes:** 
+
+## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
