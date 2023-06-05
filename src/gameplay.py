@@ -114,7 +114,7 @@ def gameplay():
         penguin = pygame.transform.scale(penguin , (40,50))
         penguin_jump = pygame.image.load('src/assets/flyingpenguin(hard).png')
         penguin_jump = pygame.transform.scale(penguin_jump , (50 , 50))
-        penguin_slide = pygame.image.load('src/assets/penguin_sliding(hard.png')
+        penguin_slide = pygame.image.load('src/assets/penguin_sliding(hard).png')
         penguin_slide = pygame.transform.scale(penguin_slide , (40,40))
     
     ice = pygame.image.load('sawczak_demo/assets/iceberg.png')
