@@ -28,7 +28,7 @@ def difficulty():
     app.peny = 300
     while running:
         app.penx += 5
-        if app.penx >= 800:
+        if app.penx >= 1000:
             app.penx = -100
     # Check events
         for event in pygame.event.get():
