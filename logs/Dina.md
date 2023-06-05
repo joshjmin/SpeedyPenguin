@@ -164,3 +164,28 @@
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
 
+***********************************
+# INSTRUCTIONS FOR THE INDIVIDUAL LOG
+* First, copy this and save it with your name. For example: `jacob.md`.
+* EACH PERSON must update THEIR OWN file at the end of each class.
+* Copy and paste the template below, and fill in the data.
+* Then commit & push it.
+
+## TEMPLATE (don't change, just copy and update)
+
+### Log for 2021-06-5
+
+> **Goals for today:** Upload character drawings manually into the code. Make the different colors for the penguin for different levels of difficulty. 
+
+> **Accomplished:** Upload character drawings manually into the code. Make the different colors for the penguin for different levels of difficulty. Found an iceberg png. 
+
+> **Plans for next day:** Draw ice berg, fix the death screen penguin becuase it looks ugly, upload ice bergs into the code. 
+
+> **Problems/bugs noted:**  Pychache complications.
+
+> **Other notes:** 
+
+## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+******
+
