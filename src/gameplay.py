@@ -4,6 +4,21 @@ app = App()
 import pygame
 from set_mode import difficulty
 
+"""
+This code runs the main function of the game 
+such as setting up speed 
+(and how it increases as level goes up)
+obstacles (2x for jumping, 1x for sliding, 1x for jump or slide, 1x flying).
+This code also takes the difficuly setting
+chosen by the user and models the
+speed and jump after that choice.
+The code also messures score based on distance/level and 
+displays it on the lower bar.
+It also imports 3 types of penguin (standing, sliding and flying)
+and changes the users icon based of the keys pressed.
+
+"""
+
 def gameplay():
     #imports
     import random
