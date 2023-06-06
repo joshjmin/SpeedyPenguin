@@ -22,6 +22,17 @@ def death():
     replay= font.render('Press SPACE to Play' , True , 'black' , '#998484')
     quiting = font.render('Press Q to Quit' , True , 'black' , '#998484')
 
+    """
+    Set up a window with the text displaying a GAME OVER message 
+    and the score of that round.
+    Player is then presented with the choice of either 
+    playing again by pressing space or quiting the game 
+    by pressing q. Space will then take the player back to the options screen. 
+    Q will close the game. 
+    
+    """
+
+    
     running = False 
 
     #Main Loop 

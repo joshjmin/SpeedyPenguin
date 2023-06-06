@@ -12,6 +12,7 @@ def death():
     score = font.render('Score is:', True, 'black', '#998484')
     replay= font.render('Press space to play' , True , 'black' , '#998484')
 
+
     running = False 
 
     while not running:
