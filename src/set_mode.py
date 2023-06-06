@@ -19,6 +19,14 @@ def difficulty():
     text_3 = font.render('NORMAL = 2', True, 'black', '#A5F2F3')
     text_4 = font.render('HARD = 3', True, 'black', '#A5F2F3')
 
+    """
+
+    This screen appears after the 2 opening screens and offer 
+    the user the choice of chosing between 3 different modes 
+    or levels ranging from easy to hard. The speed and jump
+    are the only controls that change as a result of this choice.
+
+    """
 
 # Main loop
     running = True
