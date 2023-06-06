@@ -22,10 +22,12 @@ def open_text():
 
 
     """
-    
+
     Set up a window with the text displaying a start game message.
     The screen gives instructions to the player as to how to 
-    play (w/up to jump, s/down to slide and space to jump)  
+    play (w/up to jump, s/down to slide and space to jump).
+    The screen also has a moving penguin in the 
+    flying motion used for the game its self 
     
     """
 # Main loop

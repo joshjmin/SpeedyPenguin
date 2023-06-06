@@ -19,6 +19,17 @@ def title_text():
     text = font.render('WELCOME TO PENGUIN JUMP', True, 'black', '#A5F2F3')
     text_2 = font.render('PRESS SPACE TO CONTINUE', True, 'black', '#A5F2F3')
         
+    """
+    
+    Sets up an opening window that displays 
+    an opening message and
+    sets to continue to the next page. 
+    It also displays a cute image 
+    of a penguin that is used in the game. 
+    
+    """
+
+
     running = True
 
     while running:
