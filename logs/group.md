@@ -94,10 +94,10 @@
 
 **Present:** Colin, Julia, Josh, Dina 
 
-> **Project status:** completed a title page 
+> **Project status:** completed a title page, changed some of the circles into ice  
 
 > **New items/bug reports:** no group bugs :-:
 
-> **Plans for next scrum:** sounds, pictures 
+> **Plans for next scrum:** 
 
 
