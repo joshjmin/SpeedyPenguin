@@ -161,27 +161,33 @@ def gameplay():
         #making the projictle move and projectile movement
         if com == 1:
             com = 0
+            #set restrictions based on level
             if level == 1:
                 a = random.randint(0,1)
             elif level == 2:
                 a = random.randint(0,2)
             elif level >= 3:
                 a = random.randint(0,4)
+        #make standered iceberg move
         if a == 0:
             app.standerdx -= 3 + speed - mode
+        #make fast move
         elif a == 2:
-            app.fastx -= 6 + speed - mode
+            app.fastx -= 7 + speed - mode
+        #make the faker move
         elif a == 3:
             app.flyerx -= 4 + speed - mode
             if app.flyerx < 150:
                 app.flyery -= 4 + speed - mode
                 app.flyerx -= 2 + speed - mode
+        #make the diver move
         elif a == 4:
             if app.divery <= 325:
                 app.divery += 3 + speed - mode
             app.diverx -= 4 - mode
             app.uperx = app.diverx 
             app.upery = app.divery - 30
+        #make the middle slider
         elif a == 1:
             app.middlex -= 3 + speed - mode
             app.uperx = app.middlex 
@@ -197,9 +203,12 @@ def gameplay():
         #keys means if a key is pressed
         keys = pygame.key.get_pressed()   
         #what to do if preseed
+        #Jumping
         if keys[pygame.K_UP] or keys[pygame.K_SPACE]  or keys[pygame.K_w]:
+            #max hight
             if app.p_y < 50:
                 pass
+            #restrictions based on time jumping
             elif time <= 23:
                 app.p_y -= 6 + speed / 2 - air
                 time += 0.7 - mode / 3
@@ -210,10 +219,10 @@ def gameplay():
         elif app.p_y < 350:
             app.p_y += 5 + speed / 2 + air
             motion = 'jumping'
-
+        #reset to bace level
         if app.p_y > 350:
             app.p_y = 350
-
+        #code for how to slide
         if keys[pygame.K_DOWN] or keys[pygame.K_s]:
             if app.p_y < 349:
                 pass
@@ -255,7 +264,7 @@ def gameplay():
 
         #drawings
         #TODO make animation for the walking of the main player
-        #make the backround #TODO better
+        #TODO make a backround
         pygame.draw.rect(window , '#000064' , (0,0,400,400))
         #draw the charecters
         if motion == 'standing':
@@ -274,15 +283,7 @@ def gameplay():
         window.blit(ice2 , (app.middlex - 30, app.middley - 25))
         window.blit(ice2 , (app.uperx - 30, app.upery - 25))
 
-        pygame.draw.circle(window, 'green' , (app.fastx , app.fasty) , 20)
-        pygame.draw.circle(window, 'purple' , (app.flyerx , app.flyery) , 20)
-        pygame.draw.rect(window, '#A5F2F3', (0, 365, 400, 400))
-        pygame.draw.circle(window , 'yellow' , (app.diverx , app.divery) , 20)
-        pygame.draw.circle(window , 'brown' , (app.middlex , app.middley) , 20)
-        if app.uperx == app.middlex:
-            pygame.draw.circle(window , 'brown' , (app.uperx , app.upery) , 20)
-        elif app.uperx == app.diverx:
-            pygame.draw.circle(window , 'yellow' , (app.uperx , app.upery) , 20)
+        
         
 
         #jump meter

@@ -55,7 +55,7 @@ def difficulty():
         if keys[pygame.K_2]:
             return 0
         if keys[pygame.K_3]:
-            return -2
+            return -3
     # Update the display
         pygame.display.flip()
     pygame.quit()
