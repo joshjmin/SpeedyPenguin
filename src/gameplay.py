@@ -6,7 +6,6 @@ from set_mode import difficulty
 
 def gameplay():
     #imports
-    import pygame
     import random
     from time import sleep
 
@@ -36,13 +35,11 @@ def gameplay():
     app.middley = 330
     app.uperx = 500
     app.upery = 500
-    leveling = True
 
     time = 0
     gtime = 0
     speed = 0 + (gtime)
 
-    run = True 
     com = 1
     motion = 'standing'
     frame = 0
@@ -268,14 +265,14 @@ def gameplay():
         else:
             window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
 
-        window.blit (ice, (app.standerdx - 30  , app.standerdy - 35))
-        window.blit(ice2 , (app.fastx , app.fasty - 45))
-        window.blit(ice2 , (app.flyerx - 30, app.flyery - 45))
-        window.blit(ice2 , (app.diverx - 40 , app.divery - 45))
-        window.blit(ice2 , (app.diverx - 30, app.divery - 45))
-        window.blit(ice2 , (app.middlex - 30, app.middley - 45))
-        window.blit(ice2 , (app.middlex - 30, app.middley - 45))
-        window.blit(ice2 , (app.uperx - 30, app.upery - 45))
+        window.blit (ice, (app.standerdx - 45  , app.standerdy - 35))
+        window.blit(ice2 , (app.fastx - 30, app.fasty - 25))
+        window.blit(ice2 , (app.flyerx - 30, app.flyery - 25))
+        window.blit(ice2 , (app.diverx - 30 , app.divery - 25))
+        window.blit(ice2 , (app.diverx - 30, app.divery - 25))
+        window.blit(ice2 , (app.middlex - 30, app.middley - 25))
+        window.blit(ice2 , (app.middlex - 30, app.middley - 25))
+        window.blit(ice2 , (app.uperx - 30, app.upery - 25))
 
         pygame.draw.circle(window, 'green' , (app.fastx , app.fasty) , 20)
         pygame.draw.circle(window, 'purple' , (app.flyerx , app.flyery) , 20)

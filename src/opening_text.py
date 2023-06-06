@@ -23,8 +23,10 @@ def open_text():
     running = True
     frame = 1
     going = 'up'
+    #main loop
     while running:
         clock.tick(120)
+        #making the animation
         if frame < 0:
             frame += 0.3
             going = 'up'

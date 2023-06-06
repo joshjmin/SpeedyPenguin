@@ -4,8 +4,6 @@ app = App()
 import pygame
 def difficulty():
 
-    import pygame
-
 # Set up the window
     pygame.init()
     pygame.display.set_caption('Speedy Penguin')
