@@ -29,10 +29,11 @@ def death():
     playing again by pressing space or quiting the game 
     by pressing q. Space will then take the player back to the options screen. 
     Q will close the game. 
+    It also have a dizzy penguin image located on the right.
     
     """
 
-    
+
     running = False 
 
     #Main Loop 
