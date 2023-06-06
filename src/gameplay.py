@@ -281,7 +281,7 @@ def gameplay():
         #TODO make animation for the walking of the main player
         #TODO make a backround
         pygame.draw.rect(window , '#000064' , (0,0,400,400))
-        pygame.draw.rect(window , '#A5F2F3' , (0,350,400,400))
+        pygame.draw.rect(window , '#00FFFF' , (0,350,400,400))
         #draw the charecters
         if motion == 'standing':
             window.blit(penguin, (app.p_x - 30  , app.p_y - 30))

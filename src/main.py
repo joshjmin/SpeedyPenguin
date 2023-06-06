@@ -18,4 +18,3 @@ open_text()
 while playing:
     death()
 exit()
-
