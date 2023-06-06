@@ -19,14 +19,21 @@ def open_text():
     text = font.render('PRESS W/UP to Jump', True, 'black', '#A5F2F3')
     text_2 = font.render('PRESS S/DOWN to Slide', True, 'black', '#A5F2F3')
     text_3 = font.render('Press SPACE to Play' , True , 'black', '#A5F2F3')
+
+
+    """
+    
+    Set up a window with the text displaying a start game message.
+    The screen gives instructions to the player as to how to 
+    play (w/up to jump, s/down to slide and space to jump)  
+    
+    """
 # Main loop
     running = True
     frame = 1
     going = 'up'
-    #main loop
     while running:
         clock.tick(120)
-        #making the animation
         if frame < 0:
             frame += 0.3
             going = 'up'
