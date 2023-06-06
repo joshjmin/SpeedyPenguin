@@ -87,3 +87,13 @@
 > **Accomplished:** all but new charecter modles
 
 > **Plans for next day:** add charecter modles
+
+### Log for 2021-06-06
+
+> **Goals for today:** fix game setting make modles and add coments
+
+> **Accomplished:** fixed game settings and made new moddles and added diffrent colours and edded coments
+
+> **Plans for next day: add new colours and start working on a backround
+
+> **Problems/bugs noted:** none
