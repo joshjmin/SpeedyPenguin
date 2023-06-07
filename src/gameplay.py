@@ -331,11 +331,11 @@ def gameplay():
             pygame.draw.rect(window, 'green' , (55 , 5 , 40 , 30))
         #making a score board
         font = pygame.font.SysFont('New times roman', 24)
-        app.text = font.render(f'LEVEL: {level}', True, '#0000FF', '#A5F2F3')
+        app.text = font.render(f'LEVEL: {level}', True, '#0000FF', '#00FFFF')
         window.blit(app.text , (300,375))
         #score
         font_2 = pygame.font.SysFont('New times roman', 24)
-        app.text_2 = font_2.render(f'score: {gtime}', True, '#0000FF', '#A5F2F3')
+        app.text_2 = font_2.render(f'score: {gtime}', True, '#0000FF', '#00FFFF')
         window.blit(app.text_2 , (100,375))
         pygame.display.flip()
     pygame.quit()
