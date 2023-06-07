@@ -222,7 +222,8 @@ def gameplay():
         if keys[pygame.K_UP] or keys[pygame.K_SPACE]  or keys[pygame.K_w]:
             #max hight
             if app.p_y < 50:
-                pass
+                time += 0.7 - mode / 3
+                app.p_y += 10
             #restrictions based on time jumping
             elif time <= 23:
                 app.p_y -= 6 + speed / 2 - air
@@ -291,13 +292,13 @@ def gameplay():
             window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
 
         window.blit (ice, (app.standerdx - 45  , app.standerdy - 35))
-        window.blit(ice2 , (app.fastx - 25, app.fasty - 25))
-        window.blit(ice2 , (app.flyerx - 25, app.flyery - 25))
-        window.blit(ice2 , (app.diverx - 25 , app.divery - 25))
-        window.blit(ice2 , (app.diverx - 25, app.divery - 25))
-        window.blit(ice2 , (app.middlex - 25, app.middley - 25))
-        window.blit(ice2 , (app.middlex - 25, app.middley - 25))
-        window.blit(ice2 , (app.uperx - 25, app.upery - 25))
+        window.blit(ice2 , (app.fastx - 20, app.fasty - 25))
+        window.blit(ice2 , (app.flyerx - 20, app.flyery - 25))
+        window.blit(ice2 , (app.diverx - 20 , app.divery - 25))
+        window.blit(ice2 , (app.diverx - 20, app.divery - 25))
+        window.blit(ice2 , (app.middlex - 20, app.middley - 25))
+        window.blit(ice2 , (app.middlex - 20, app.middley - 25))
+        window.blit(ice2 , (app.uperx - 20, app.upery - 25))
 
         
         
