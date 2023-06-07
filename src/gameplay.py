@@ -188,10 +188,10 @@ def gameplay():
             app.standerdx -= 3 + speed - mode
         #make fast move
         elif a == 2:
-            app.fastx -= 7 + speed - mode
+            app.fastx -= 5 + speed - mode
         #make the faker move
         elif a == 3:
-            app.flyerx -= 4 + speed - mode
+            app.flyerx -= 3 + speed - mode
             if app.flyerx < 150:
                 app.flyery -= 4 + speed - mode
                 app.flyerx -= 2 + speed - mode
