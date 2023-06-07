@@ -9,7 +9,7 @@ def open_text():
 # Set up the window
     pygame.init()
     pygame.display.set_caption('Speedy Penguin')
-    window = pygame.display.set_mode([400, 400])
+    window = pygame.display.set_mode([300, 330])
 
 # Set up text module
     pygame.font.init()
@@ -63,7 +63,7 @@ def open_text():
 
     #make the main charecter
         pen = pygame.image.load('src/assets/flyingpenguin(pink).png')
-        pen = pygame.transform.scale(pen, (150,150))
+        pen = pygame.transform.scale(pen, (120,100))
         window.blit(pen, (50 + frame , 170 + frame))
 
         #quit if they press space
