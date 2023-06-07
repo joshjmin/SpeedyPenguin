@@ -100,4 +100,14 @@
 
 > **Plans for next scrum:** 
 
+# Meeting of 2023-06-6
+
+**Present:** Colin, Julia
+
+> **Project status:** completed  documentation and fixed colour of ice
+
+> **New items/bug reports:** can jump so high once speed increases that it never comes down :<
+
+> **Plans for next scrum:** sound effects 
+
 
