@@ -291,13 +291,13 @@ def gameplay():
             window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
 
         window.blit (ice, (app.standerdx - 45  , app.standerdy - 35))
-        window.blit(ice2 , (app.fastx - 30, app.fasty - 25))
-        window.blit(ice2 , (app.flyerx - 30, app.flyery - 25))
-        window.blit(ice2 , (app.diverx - 30 , app.divery - 25))
-        window.blit(ice2 , (app.diverx - 30, app.divery - 25))
-        window.blit(ice2 , (app.middlex - 30, app.middley - 25))
-        window.blit(ice2 , (app.middlex - 30, app.middley - 25))
-        window.blit(ice2 , (app.uperx - 30, app.upery - 25))
+        window.blit(ice2 , (app.fastx - 25, app.fasty - 25))
+        window.blit(ice2 , (app.flyerx - 25, app.flyery - 25))
+        window.blit(ice2 , (app.diverx - 25 , app.divery - 25))
+        window.blit(ice2 , (app.diverx - 25, app.divery - 25))
+        window.blit(ice2 , (app.middlex - 25, app.middley - 25))
+        window.blit(ice2 , (app.middlex - 25, app.middley - 25))
+        window.blit(ice2 , (app.uperx - 25, app.upery - 25))
 
         
         
