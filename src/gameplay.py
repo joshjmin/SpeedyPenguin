@@ -198,10 +198,12 @@ def gameplay():
         #make the diver move
         elif a == 4:
             if app.divery <= 325:
-                app.divery += 3 + speed - mode
+                app.divery += 4 + speed - mode
             app.diverx -= 4 - mode
             app.uperx = app.diverx 
             app.upery = app.divery - 30
+            if app.divery > 325:
+                app.divery = 325
         #make the middle slider
         elif a == 1:
             app.middlex -= 3 + speed - mode
