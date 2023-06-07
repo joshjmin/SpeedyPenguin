@@ -53,7 +53,7 @@ def gameplay():
 
     time = 0
     gtime = 0
-    speed = 0 + (gtime)
+    speed = 0 + (gtime * (1.1))
 
     com = 1
     motion = 'standing'
@@ -97,7 +97,7 @@ def gameplay():
         app.fastx -= 6 + speed - mode
     def diver():
         if app.divery <= 325:
-            app.divery += 3 +speed - mode
+            app.divery += 3 + speed - mode
         app.diverx -= 2 + speed - mode
         app.uperx = app.diverx 
         app.upery = app.divery - 30
