@@ -82,4 +82,13 @@
 
 > **Problems/bugs noted:** 3rd opening sliding penguin moves fasted on my computer but it is not a bug, just computer speed 
 
+### Log for 2023-06-6
+
+> **Goals for today:** make docstrings 
+
+> **Accomplished:**  added docstrings for all the final code
+
+> **Plans for next day:** finish organizing code, maybe add some more settings? 
+
+> **Problems/bugs noted:** none
 
