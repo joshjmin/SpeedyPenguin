@@ -58,6 +58,7 @@ def gameplay() -> None:
     com = 1
     motion = 'standing'
     frame = 0
+    falling_air = 0
     mode = 0
     mode = difficulty()
     def reset() -> None:
@@ -86,22 +87,22 @@ def gameplay() -> None:
         frame = 0
         active = False
     #definitions
-    def flyer() -> None:
+    def flyer():
         app.flyerx -= 4 + speed - mode
         if app.flyerx < 150:
             app.flyery -= 4 + speed - mode
             app.flyerx -= 2 + speed - mode
-    def standerd() -> None:
+    def standerd():
         app.standerdx -= 3 + speed - mode
-    def fast() -> None:
+    def fast():
         app.fastx -= 6 + speed - mode
-    def diver() -> None:
+    def diver():
         if app.divery <= 325:
             app.divery += 3 + speed - mode
         app.diverx -= 2 + speed - mode
         app.uperx = app.diverx 
         app.upery = app.divery - 30
-    def middle() -> None:
+    def middle():
         app.middlex -= 3 + speed - mode
         app.uperx = app.middlex 
         app.upery = app.middley - 30
@@ -109,7 +110,7 @@ def gameplay() -> None:
     #generate assets
     if mode == 1:
         penguin = pygame.image.load('src/assets/penguin_standing.png')    
-        penguin = pygame.transform.scale(penguin , (50,50))
+        penguin = pygame.transform.scale(penguin , (40,50))
         penguin_jump = pygame.image.load('src/assets/flyingpenguin(pink).png')
         penguin_jump = pygame.transform.scale(penguin_jump , (50 , 50))
         penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
@@ -138,7 +139,7 @@ def gameplay() -> None:
     #main loop 
     while active:
     #ticks and frame data
-        clock.tick(120)
+        clock.tick(200)
     #collect fram data
         frame += 1
         if frame == 4:
@@ -215,12 +216,14 @@ def gameplay() -> None:
             air += 0.13
         if app.p_y == 350:
             air = 0
+            falling_air = 0
 
         #track inputs
         #keys means if a key is pressed
         keys = pygame.key.get_pressed()   
         #what to do if preseed
         #Jumping
+        past_y = app.p_y
         if keys[pygame.K_UP] or keys[pygame.K_SPACE]  or keys[pygame.K_w]:
             #max hight
             if app.p_y < 50:
@@ -232,7 +235,7 @@ def gameplay() -> None:
                 time += 0.7 - mode / 3
                 motion = 'jumping'
             elif app.p_y < 350: 
-                app.p_y += 5 + speed / 2 + air
+                app.p_y += 5 + speed / 2 + falling_air
                 motion = 'jumping'
         elif app.p_y < 350:
             app.p_y += 5 + speed / 2 + air
@@ -240,6 +243,10 @@ def gameplay() -> None:
         #reset to bace level
         if app.p_y > 350:
             app.p_y = 350
+        if past_y < app.p_y:
+            falling_air += 0.13
+    
+
         #code for how to slide
         if keys[pygame.K_DOWN] or keys[pygame.K_s]:
             if app.p_y < 349:
@@ -337,5 +344,6 @@ def gameplay() -> None:
         font_2 = pygame.font.SysFont('New times roman', 24)
         app.text_2 = font_2.render(f'score: {gtime}', True, '#0000FF', '#00FFFF')
         window.blit(app.text_2 , (100,375))
+        print(falling_air)
         pygame.display.flip()
     pygame.quit()
