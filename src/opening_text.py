@@ -4,7 +4,7 @@ class App:
     pass
 app = App()
 clock = pygame.time.Clock()
-def open_text():
+def open_text() -> None:
 
 # Set up the window
     pygame.init()

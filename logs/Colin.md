@@ -96,4 +96,12 @@
 
 > **Plans for next day: add new colours and start working on a backround
 
-> **Problems/bugs noted:** none
+> **Problems/bugs noted:** you can stick to the roof if you go high enough
+
+### Log for 2021-06-06
+
+> **Goals for today:** add some colours and fix some bugs with jumping(if high enough, you will stick to the sealing and not need to play the game)
+
+> **Accomplished:** Fixed bugs and added colours
+
+> **Plans for next day: add sounds
