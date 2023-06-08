@@ -109,7 +109,7 @@ def gameplay() -> None:
     #generate assets
     if mode == 1:
         penguin = pygame.image.load('src/assets/penguin_standing.png')    
-        penguin = pygame.transform.scale(penguin , (40,50))
+        penguin = pygame.transform.scale(penguin , (50,50))
         penguin_jump = pygame.image.load('src/assets/flyingpenguin(pink).png')
         penguin_jump = pygame.transform.scale(penguin_jump , (50 , 50))
         penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
