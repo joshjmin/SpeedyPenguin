@@ -189,3 +189,33 @@
 
 ******
 
+# INSTRUCTIONS FOR THE INDIVIDUAL LOG
+* First, copy this and save it with your name. For example: `jacob.md`.
+* EACH PERSON must update THEIR OWN file at the end of each class.
+* Copy and paste the template below, and fill in the data.
+* Then commit & push it.
+
+## TEMPLATE (don't change, just copy and update)
+
+### Log for 2021-06-06
+
+> **Goals for today:**  absent
+
+> **Accomplished:** 
+
+> **Plans for next day:** 
+
+> **Problems/bugs noted:**  
+
+> **Other notes:** 
+
+## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+******
+
+
+
+
+
+
+
