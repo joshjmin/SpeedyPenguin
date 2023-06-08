@@ -2,7 +2,7 @@ import pygame
 from gameplay import gameplay
 
 
-def death():
+def death() -> None:
 
     #Sets up the score function 
     score = gameplay()
