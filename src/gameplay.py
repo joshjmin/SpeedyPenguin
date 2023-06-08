@@ -19,7 +19,7 @@ and changes the users icon based of the keys pressed.
 
 """
 
-def gameplay():
+def gameplay() -> None:
     #imports
     import random
     from time import sleep
@@ -61,7 +61,7 @@ def gameplay():
     falling_air = 0
     mode = 0
     mode = difficulty()
-    def reset():
+    def reset() -> None:
         sleep(1)
         air = 0
         app.p_x = 50
