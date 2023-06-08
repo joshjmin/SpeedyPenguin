@@ -2,7 +2,7 @@ class App:
     pass
 app = App()
 import pygame
-def difficulty():
+def difficulty() -> None:
 
 # Set up the window
     pygame.init()
