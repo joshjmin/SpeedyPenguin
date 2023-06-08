@@ -19,7 +19,7 @@ and changes the users icon based of the keys pressed.
 
 """
 
-def gameplay():
+def gameplay() -> None:
     #imports
     import random
     from time import sleep
@@ -60,7 +60,7 @@ def gameplay():
     frame = 0
     mode = 0
     mode = difficulty()
-    def reset():
+    def reset() -> None:
         sleep(1)
         air = 0
         app.p_x = 50
@@ -86,22 +86,22 @@ def gameplay():
         frame = 0
         active = False
     #definitions
-    def flyer():
+    def flyer() -> None:
         app.flyerx -= 4 + speed - mode
         if app.flyerx < 150:
             app.flyery -= 4 + speed - mode
             app.flyerx -= 2 + speed - mode
-    def standerd():
+    def standerd() -> None:
         app.standerdx -= 3 + speed - mode
-    def fast():
+    def fast() -> None:
         app.fastx -= 6 + speed - mode
-    def diver():
+    def diver() -> None:
         if app.divery <= 325:
             app.divery += 3 + speed - mode
         app.diverx -= 2 + speed - mode
         app.uperx = app.diverx 
         app.upery = app.divery - 30
-    def middle():
+    def middle() -> None:
         app.middlex -= 3 + speed - mode
         app.uperx = app.middlex 
         app.upery = app.middley - 30
