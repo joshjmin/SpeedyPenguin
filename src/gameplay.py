@@ -26,6 +26,7 @@ def gameplay():
 
     #start window and other starting actions
     pygame.init()
+    pygame.mixer.init()
     window = pygame.display.set_mode((400, 400))
     pygame.display.set_caption('Enter the Name of the game')
     clock = pygame.time.Clock()
@@ -85,7 +86,8 @@ def gameplay():
         motion = 'standing'
         frame = 0
         active = False
-    #definitions
+
+    #obstacles
     def flyer():
         app.flyerx -= 4 + speed - mode
         if app.flyerx < 150:
@@ -134,7 +136,13 @@ def gameplay():
     ice2 = pygame.image.load('src/assets/isicle.png')    
     ice2 = pygame.transform.scale(ice2 , (30,30))
     ice2 = pygame.transform.rotate(ice2 , 270)
+
+
+
     active = True
+
+
+
     #main loop 
     while active:
     #ticks and frame data
@@ -148,6 +156,10 @@ def gameplay():
         speed += (gtime /  5000000)
         #what level is the speed at
         level = int((gtime // 1000) + 1)
+
+        #music
+        pygame.mixer.music.load('src/assets/GeometryDash.mp3')
+        pygame.mixer.music.play(-1)
 
         #check if they quit
         for event in pygame.event.get():
@@ -281,7 +293,7 @@ def gameplay():
             return gtime
 
         #drawings
-        #TODO make animation for the walking of the main player
+     
         #TODO make a backround
         pygame.draw.rect(window , '#000064' , (0,0,400,400))
         pygame.draw.rect(window , '#00FFFF' , (0,350,400,400))
@@ -293,7 +305,7 @@ def gameplay():
         else:
             window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
 
-        window.blit (ice, (app.standerdx - 45  , app.standerdy - 35))
+        window.blit(ice, (app.standerdx - 45  , app.standerdy - 35))
         window.blit(ice2 , (app.fastx - 20, app.fasty - 25))
         window.blit(ice2 , (app.flyerx - 20, app.flyery - 25))
         window.blit(ice2 , (app.diverx - 20 , app.divery - 25))
@@ -329,7 +341,7 @@ def gameplay():
             pygame.draw.rect(window, 'green' , (50,5,40,30))
         if time <= 0:
             pygame.draw.rect(window, 'green' , (55 , 5 , 40 , 30))
-        #making a score board
+        #making a score board 
         font = pygame.font.SysFont('New times roman', 24)
         app.text = font.render(f'LEVEL: {level}', True, '#0000FF', '#A5F2F3')
         window.blit(app.text , (300,375))

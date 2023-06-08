@@ -9,14 +9,14 @@ def title_text():
     # Set up the window
     pygame.init()
     pygame.display.set_caption('Speedy Penguin')
-    window = pygame.display.set_mode([330, 330])
+    window = pygame.display.set_mode([360, 330])
 
     # Set up text module
     pygame.font.init()
     font = pygame.font.SysFont('New times roman', 30)
 
     # Define text
-    text = font.render('WELCOME TO PENGUIN JUMP', True, 'black', '#A5F2F3')
+    text = font.render('WELCOME TO SPEEDY PENGUIN', True, 'black', '#A5F2F3')
     text_2 = font.render('PRESS SPACE TO CONTINUE', True, 'black', '#A5F2F3')
         
     """
