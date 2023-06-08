@@ -91,3 +91,13 @@ ABSENT
 
 ### Log for 2023-06-07
 PRESENTATION DAY
+
+### Log for 2023-06-08
+
+> **Goals for today:** add sound and organize
+
+> **Accomplished:** added sound and adjusted details
+
+> **Plans for next day:** add more sound for different windows
+
+> **Problems/bugs noted:** sound played at wrong time
