@@ -60,13 +60,6 @@
 
 ### Log for 2023-05-31
 ABSENT
-> **Goals for today:** 
-
-> **Accomplished:** 
-
-> **Plans for next day:** 
-
-> **Problems/bugs noted:** 
 
 ### Log for 2023-06-01
 
@@ -80,11 +73,7 @@ ABSENT
 
 ### Log for 2023-06-02
 ABSENT
-> **Goals for today:** 
 
-> **Accomplished:** 
-
-> **Plans for next day:** 
 
 ### Log for 2023-06-05
 
@@ -96,3 +85,9 @@ ABSENT
 
 > **Problems/bugs noted:** had trouble with pushing new title
 
+### Log for 2023-06-06
+ABSENT
+
+
+### Log for 2023-06-07
+PRESENTATION DAY
