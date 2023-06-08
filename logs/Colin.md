@@ -105,3 +105,11 @@
 > **Accomplished:** Fixed bugs and added colours
 
 > **Plans for next day: add sounds
+
+### Log for 2021-06-06
+
+> **Goals for today:** looked at sounds and phisics
+
+> **Accomplished:** look above
+
+> **Plans for next day: add sounds
