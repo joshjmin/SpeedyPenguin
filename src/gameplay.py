@@ -158,10 +158,6 @@ def gameplay() -> None:
         #what level is the speed at
         level = int((gtime // 1000) + 1)
 
-        #music
-        pygame.mixer.music.load('src/assets/GeometryDash.mp3')
-        pygame.mixer.music.play(-1)
-
         #check if they quit
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -256,8 +252,7 @@ def gameplay() -> None:
         if app.p_y > 350:
             app.p_y = 350
         if past_y < app.p_y:
-            falling_air += 0.13
-    
+            falling_air += 0.1
 
         #code for how to slide
         if keys[pygame.K_DOWN] or keys[pygame.K_s]:
@@ -356,6 +351,5 @@ def gameplay() -> None:
         font_2 = pygame.font.SysFont('New times roman', 24)
         app.text_2 = font_2.render(f'score: {gtime}', True, '#0000FF', '#00FFFF')
         window.blit(app.text_2 , (100,375))
-        print(falling_air)
         pygame.display.flip()
     pygame.quit()
