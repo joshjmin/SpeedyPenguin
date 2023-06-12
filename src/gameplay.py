@@ -19,7 +19,10 @@ and changes the users icon based of the keys pressed.
 
 """
 
-def gameplay() -> None:
+
+
+
+def gameplay() -> int:
     #imports
     import random
     from time import sleep
@@ -27,6 +30,9 @@ def gameplay() -> None:
     #start window and other starting actions
     pygame.init()
     pygame.mixer.init()
+    #set up the music
+    pygame.mixer.music.load('src/assets/GeometryDash.mp3')
+    pygame.mixer.music.play(-1)
     window = pygame.display.set_mode((400, 400))
     pygame.display.set_caption('Enter the Name of the game')
     clock = pygame.time.Clock()
@@ -352,4 +358,5 @@ def gameplay() -> None:
         app.text_2 = font_2.render(f'score: {gtime}', True, '#0000FF', '#00FFFF')
         window.blit(app.text_2 , (100,375))
         pygame.display.flip()
+    pygame.mixer.stop()
     pygame.quit()

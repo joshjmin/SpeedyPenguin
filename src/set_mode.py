@@ -2,7 +2,7 @@ class App:
     pass
 app = App()
 import pygame
-def difficulty() -> None:
+def difficulty() -> int:
 
 # Set up the window
     pygame.init()
@@ -33,8 +33,6 @@ def difficulty() -> None:
     app.penx = -100
     app.peny = 300
     while running:
-        pygame.mixer.music.load('src/assets/GeometryDash.mp3')
-        pygame.mixer.music.play(-1)
         app.penx += 5
         if app.penx >= 1000:
             app.penx = -100
