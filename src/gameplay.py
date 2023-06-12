@@ -70,6 +70,7 @@ def gameplay() -> int:
     mode = difficulty()
     def reset() -> None:
         sleep(1)
+        pygame.mixer.music.stop()
         air = 0
         app.p_x = 50
         app.p_y = 350
