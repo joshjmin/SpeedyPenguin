@@ -30,9 +30,6 @@ def gameplay() -> int:
     #start window and other starting actions
     pygame.init()
     pygame.mixer.init()
-    #set up the music
-    pygame.mixer.music.load('src/assets/GeometryDash.mp3')
-    pygame.mixer.music.play(-1)
     window = pygame.display.set_mode((400, 400))
     pygame.display.set_caption('Enter the Name of the game')
     clock = pygame.time.Clock()
@@ -68,6 +65,9 @@ def gameplay() -> int:
     falling_air = 0
     mode = 0
     mode = difficulty()
+    #make the music
+    pygame.mixer.music.load('src/assets/GeometryDash.mp3')
+    pygame.mixer.music.play(-1)
     def reset() -> None:
         sleep(1)
         pygame.mixer.music.stop()
