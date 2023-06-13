@@ -189,14 +189,6 @@
 
 ******
 
-# INSTRUCTIONS FOR THE INDIVIDUAL LOG
-* First, copy this and save it with your name. For example: `jacob.md`.
-* EACH PERSON must update THEIR OWN file at the end of each class.
-* Copy and paste the template below, and fill in the data.
-* Then commit & push it.
-
-## TEMPLATE (don't change, just copy and update)
-
 ### Log for 2021-06-06
 
 > **Goals for today:** Fix the death screen penguin becuase it looks ugly, upload ice bergs into the code. 
@@ -212,10 +204,15 @@
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
 
 ******
+### Log for 2021-06-07
+
+Presentations
+
+******
 
 ### Log for 2021-06-08
 
-> **Goals for today:**  
+> **Goals for today:** i forget what i did here
 
 > **Accomplished:** 
 
@@ -229,6 +226,27 @@
 
 ******
 
+### Log for 2021-06-12
+
+I helped with kindergarten robotics.
+
+******
+
+### Log for 2021-06-13
+
+> **Goals for today:** Edit the report. 
+
+> **Accomplished:** Editing the report, ,making comments in the game code.
+
+> **Plans for next day:** Finishing touches
+
+> **Problems/bugs noted:**  none
+
+> **Other notes:** none
+
+## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+******
 
 
 
