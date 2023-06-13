@@ -96,7 +96,7 @@ PRESENTATION DAY
 
 > **Goals for today:** add sound and organize
 
-> **Accomplished:** added sound and adjusted details
+> **Accomplished:** added background sound and adjusted details
 
 > **Plans for next day:** add more sound for different windows
 
@@ -107,10 +107,10 @@ ABSENT
 
 ### Log for 2023-06-013
 
-> **Goals for today:** add sound and organize
+> **Goals for today:** add and fix sound and organize
 
-> **Accomplished:** added sound and adjusted details
+> **Accomplished:** added sound for the closing page and jumping
 
-> **Plans for next day:** add more sound for different windows
+> **Plans for next day:** organize code and add docstrings
 
-> **Problems/bugs noted:** sound played at wrong time
+> **Problems/bugs noted:** had trouble adding sound at right places
