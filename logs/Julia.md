@@ -92,3 +92,14 @@
 
 > **Problems/bugs noted:** none
 
+### Log for 2023-06-13
+
+> **Goals for today:** work on report
+
+> **Accomplished:**  worked on report 
+
+> **Plans for next day:** finish rough copy of report 
+
+> **Problems/bugs noted:** none
+
+

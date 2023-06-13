@@ -15,7 +15,6 @@
 
 > **Plans for next scrum:** Get a working version of y
 
-> **Other notes:** delete this line if not needed
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
 
@@ -109,5 +108,37 @@
 > **New items/bug reports:** can jump so high once speed increases that it never comes down :<
 
 > **Plans for next scrum:** sound effects 
+
+# Meeting of 2023-06-7
+
+**Present:** Everyone
+
+> **Project status:** added sound and started organize  
+
+> **New items/bug reports:** none 
+
+> **Plans for next scrum:** add more sound  
+
+# Meeting of 2023-06-8
+
+**Present:** Everyone
+
+> **Project status:** added sound and started report 
+
+> **New items/bug reports:** sound playing wrong time
+
+> **Plans for next scrum:** fix sound  
+
+# Meeting of 2023-06-12
+
+**Present:** Julia 
+
+> **Project status:** worked on report 
+
+> **New items/bug reports:** none
+
+> **Plans for next scrum:** finish report   
+
+
 
 
