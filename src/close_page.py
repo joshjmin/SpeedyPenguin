@@ -9,8 +9,13 @@ def death() -> None:
 
     #Creates window 
     pygame.init()
+    pygame.mixer.init()
     pygame.display.set_caption('Speedy Penguin DEATH')
     window = pygame.display.set_mode([400, 400])
+
+    #Add sound
+    gameover_sound = pygame.mixer.Sound('src/assets/Gameover.mp3')
+    pygame.mixer.Sound.play(gameover_sound)
 
     #Define text size and font type 
     pygame.font.init()
@@ -38,6 +43,7 @@ def death() -> None:
 
     #Main Loop 
     while not running:
+
 
         #Check if quit then quit 
         for event in pygame.event.get():
