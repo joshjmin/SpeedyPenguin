@@ -55,8 +55,8 @@ def death() -> None:
     
         #Open dizzy penguin 
         dead = pygame.image.load('src/assets/dizzy_penguin.png')
-        dead = pygame.transform.scale(dead , (190,130))
-        window.blit(dead , (200 , 200))
+        dead = pygame.transform.scale(dead , (150,130))
+        window.blit(dead, (200 , 200))
     
         #resume game if space is pressed 
         keys = pygame.key.get_pressed()

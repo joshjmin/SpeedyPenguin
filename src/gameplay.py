@@ -19,13 +19,17 @@ and changes the users icon based of the keys pressed.
 
 """
 
-def gameplay() -> None:
+
+
+
+def gameplay() -> int:
     #imports
     import random
     from time import sleep
 
     #start window and other starting actions
     pygame.init()
+    pygame.mixer.init()
     window = pygame.display.set_mode((400, 400))
     pygame.display.set_caption('Enter the Name of the game')
     clock = pygame.time.Clock()
@@ -58,10 +62,15 @@ def gameplay() -> None:
     com = 1
     motion = 'standing'
     frame = 0
+    falling_air = 0
     mode = 0
     mode = difficulty()
+    #make the music
+    pygame.mixer.music.load('src/assets/GeometryDash.mp3')
+    pygame.mixer.music.play(-1)
     def reset() -> None:
         sleep(1)
+        pygame.mixer.music.stop()
         air = 0
         app.p_x = 50
         app.p_y = 350
@@ -85,23 +94,24 @@ def gameplay() -> None:
         motion = 'standing'
         frame = 0
         active = False
-    #definitions
-    def flyer() -> None:
+
+    #obstacles
+    def flyer():
         app.flyerx -= 4 + speed - mode
         if app.flyerx < 150:
             app.flyery -= 4 + speed - mode
             app.flyerx -= 2 + speed - mode
-    def standerd() -> None:
+    def standerd():
         app.standerdx -= 3 + speed - mode
-    def fast() -> None:
+    def fast():
         app.fastx -= 6 + speed - mode
-    def diver() -> None:
+    def diver():
         if app.divery <= 325:
             app.divery += 3 + speed - mode
         app.diverx -= 2 + speed - mode
         app.uperx = app.diverx 
         app.upery = app.divery - 30
-    def middle() -> None:
+    def middle():
         app.middlex -= 3 + speed - mode
         app.uperx = app.middlex 
         app.upery = app.middley - 30
@@ -109,7 +119,7 @@ def gameplay() -> None:
     #generate assets
     if mode == 1:
         penguin = pygame.image.load('src/assets/penguin_standing.png')    
-        penguin = pygame.transform.scale(penguin , (30,45))
+        penguin = pygame.transform.scale(penguin , (40,50))
         penguin_jump = pygame.image.load('src/assets/flyingpenguin(pink).png')
         penguin_jump = pygame.transform.scale(penguin_jump , (60 , 35))
         penguin_slide = pygame.image.load('src/assets/penguin_sliding(pink).png')
@@ -134,11 +144,17 @@ def gameplay() -> None:
     ice2 = pygame.image.load('src/assets/isicle.png')    
     ice2 = pygame.transform.scale(ice2 , (30,30))
     ice2 = pygame.transform.rotate(ice2 , 270)
+
+
+
     active = True
+
+
+
     #main loop 
     while active:
     #ticks and frame data
-        clock.tick(120)
+        clock.tick(200)
     #collect fram data
         frame += 1
         if frame == 4:
@@ -185,7 +201,7 @@ def gameplay() -> None:
                 a = random.randint(0,4)
         #make standered iceberg move
         if a == 0:
-            app.standerdx -= 3 + speed - mode
+            standerd()
         #make fast move
         elif a == 2:
             app.fastx -= 5 + speed - mode
@@ -215,12 +231,14 @@ def gameplay() -> None:
             air += 0.13
         if app.p_y == 350:
             air = 0
+            falling_air = 0
 
         #track inputs
         #keys means if a key is pressed
         keys = pygame.key.get_pressed()   
         #what to do if preseed
         #Jumping
+        past_y = app.p_y
         if keys[pygame.K_UP] or keys[pygame.K_SPACE]  or keys[pygame.K_w]:
             #max hight
             if app.p_y < 50:
@@ -232,7 +250,7 @@ def gameplay() -> None:
                 time += 0.7 - mode / 3
                 motion = 'jumping'
             elif app.p_y < 350: 
-                app.p_y += 5 + speed / 2 + air
+                app.p_y += 5 + speed / 2 + falling_air
                 motion = 'jumping'
         elif app.p_y < 350:
             app.p_y += 5 + speed / 2 + air
@@ -240,6 +258,9 @@ def gameplay() -> None:
         #reset to bace level
         if app.p_y > 350:
             app.p_y = 350
+        if past_y < app.p_y:
+            falling_air += 0.1
+
         #code for how to slide
         if keys[pygame.K_DOWN] or keys[pygame.K_s]:
             if app.p_y < 349:
@@ -281,7 +302,7 @@ def gameplay() -> None:
             return gtime
 
         #drawings
-        #TODO make animation for the walking of the main player
+     
         #TODO make a backround
         pygame.draw.rect(window , '#000064' , (0,0,400,400))
         pygame.draw.rect(window , '#00FFFF' , (0,350,400,400))
@@ -293,7 +314,7 @@ def gameplay() -> None:
         else:
             window.blit(penguin_slide , (app.p_x - 30 , app.p_y - 20))
 
-        window.blit (ice, (app.standerdx - 45  , app.standerdy - 35))
+        window.blit(ice, (app.standerdx - 45  , app.standerdy - 35))
         window.blit(ice2 , (app.fastx - 20, app.fasty - 25))
         window.blit(ice2 , (app.flyerx - 20, app.flyery - 25))
         window.blit(ice2 , (app.diverx - 20 , app.divery - 25))
@@ -329,7 +350,7 @@ def gameplay() -> None:
             pygame.draw.rect(window, 'green' , (50,5,40,30))
         if time <= 0:
             pygame.draw.rect(window, 'green' , (55 , 5 , 40 , 30))
-        #making a score board
+        #making a score board 
         font = pygame.font.SysFont('New times roman', 24)
         app.text = font.render(f'LEVEL: {level}', True, '#0000FF', '#00FFFF')
         window.blit(app.text , (300,375))
@@ -338,4 +359,5 @@ def gameplay() -> None:
         app.text_2 = font_2.render(f'score: {gtime}', True, '#0000FF', '#00FFFF')
         window.blit(app.text_2 , (100,375))
         pygame.display.flip()
+    pygame.mixer.stop()
     pygame.quit()
