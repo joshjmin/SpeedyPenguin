@@ -101,3 +101,16 @@ PRESENTATION DAY
 > **Plans for next day:** add more sound for different windows
 
 > **Problems/bugs noted:** sound played at wrong time
+
+### Log for 2023-06-12
+ABSENT
+
+### Log for 2023-06-013
+
+> **Goals for today:** add sound and organize
+
+> **Accomplished:** added sound and adjusted details
+
+> **Plans for next day:** add more sound for different windows
+
+> **Problems/bugs noted:** sound played at wrong time
