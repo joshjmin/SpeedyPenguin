@@ -63,7 +63,7 @@ def open_text() -> None:
 
     #make the main charecter
         pen = pygame.image.load('src/assets/flyingpenguin(pink).png')
-        pen = pygame.transform.scale(pen, (120,100))
+        pen = pygame.transform.scale(pen, (180,100))
         window.blit(pen, (50 + frame , 170 + frame))
 
         #quit if they press space

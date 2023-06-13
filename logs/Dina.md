@@ -199,7 +199,23 @@
 
 ### Log for 2021-06-06
 
-> **Goals for today:**  absent
+> **Goals for today:** Fix the death screen penguin becuase it looks ugly, upload ice bergs into the code. 
+
+> **Accomplished:** Fixed the deathscreen, fixed size proportions of the penguin, started the report.
+
+> **Plans for next day:** Work on report, make a better background, work on organizing the code. 
+
+> **Problems/bugs noted:**  none
+
+> **Other notes:** none
+
+## TEMPLATE ENDS HERE. MEETINGS START HERE.
+
+******
+
+### Log for 2021-06-08
+
+> **Goals for today:**  
 
 > **Accomplished:** 
 
@@ -212,6 +228,9 @@
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
 
 ******
+
+
+
 
 
 

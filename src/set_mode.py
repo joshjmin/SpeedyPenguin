@@ -53,7 +53,7 @@ def difficulty() -> None:
 
     #make the main charecter
         pen = pygame.image.load('src/assets/penguin_sliding(pink).png')
-        pen = pygame.transform.scale(pen, (120,100))
+        pen = pygame.transform.scale(pen, (180,100))
         window.blit(pen, (app.penx,app.peny))
 
         #quit if they press space
