@@ -240,6 +240,13 @@ def gameplay() -> int:
         #Jumping
         past_y = app.p_y
         if keys[pygame.K_UP] or keys[pygame.K_SPACE]  or keys[pygame.K_w]:
+            jump_sound = pygame.mixer.Sound('src/assets/Jump_New.mp3')
+            
+            if app.p_y > 340:
+                pygame.mixer.Sound.play(jump_sound)
+            else:
+                pass
+            
             #max hight
             if app.p_y < 50:
                 time += 0.7 - mode / 3
