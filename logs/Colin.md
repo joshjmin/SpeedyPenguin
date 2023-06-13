@@ -106,10 +106,18 @@
 
 > **Plans for next day: add sounds
 
-### Log for 2021-06-06
+### Log for 2021-06-07
 
 > **Goals for today:** looked at sounds and phisics
 
 > **Accomplished:** look above
 
 > **Plans for next day: add sounds
+
+### Log for 2021-06-13
+
+> **Goals for today:** make some phisics changes as well as fix some other bugs and music
+
+> **Accomplished:** look above
+
+> **Plans for next day: no class time
