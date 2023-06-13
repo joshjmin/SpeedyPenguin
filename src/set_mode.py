@@ -32,6 +32,9 @@ def difficulty() -> int:
     running = True
     app.penx = -100
     app.peny = 300
+    pygame.mixer.init()
+    pygame.mixer.music.load('src/assets/GeometryDash.mp3')
+    pygame.mixer.music.play(-1)
     while running:
         app.penx += 5
         if app.penx >= 1000:
@@ -66,4 +69,5 @@ def difficulty() -> int:
             return -3
     # Update the display
         pygame.display.flip()
+    pygame.mixer.stop()
     pygame.quit()
