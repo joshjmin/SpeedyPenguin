@@ -37,7 +37,7 @@ def difficulty() -> int:
     pygame.mixer.music.play(-1)
     while running:
         app.penx += 5
-        if app.penx >= 1000:
+        if app.penx >= 700:
             app.penx = -100
     # Check events
         for event in pygame.event.get():
