@@ -154,7 +154,7 @@ def gameplay() -> int:
     #main loop 
     while active:
     #ticks and frame data
-        clock.tick(75)
+        clock.tick(60)
     #collect fram data
         frame += 1
         if frame == 4:
