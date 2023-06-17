@@ -79,7 +79,7 @@
 
 ## TEMPLATE (don't change, just copy and update)
 
-### Log for 2021-05-29
+### Log for 2021-05-30
 
 > **Goals for today:** Finish two more character drawings. 
 
@@ -102,7 +102,7 @@
 
 ## TEMPLATE (don't change, just copy and update)
 
-### Log for 2021-05-30
+### Log for 2021-05-31
 
 > **Goals for today:** Absent
 
@@ -127,7 +127,7 @@
 
 ### Log for 2021-06-1
 
-> **Goals for today:** Absent (fix this)
+> **Goals for today:** Absent 
 
 > **Accomplished:** Absent
 
@@ -138,8 +138,6 @@
 > **Other notes:** 
 
 ## TEMPLATE ENDS HERE. MEETINGS START HERE.
-
-
 
 ***********************************
 # INSTRUCTIONS FOR THE INDIVIDUAL LOG
@@ -185,9 +183,6 @@
 
 > **Other notes:** 
 
-## TEMPLATE ENDS HERE. MEETINGS START HERE.
-
-******
 
 ### Log for 2021-06-06
 
@@ -201,52 +196,43 @@
 
 > **Other notes:** none
 
-## TEMPLATE ENDS HERE. MEETINGS START HERE.
 
-******
 ### Log for 2021-06-07
-
 Presentations
 
-******
 
 ### Log for 2021-06-08
 
-> **Goals for today:** i forget what i did here
+> **Goals for today:** Discuss report with teammates and write the report.
 
-> **Accomplished:** 
+> **Accomplished:** Discussion with teammates, and wrote parts of the report. 
 
-> **Plans for next day:** 
+> **Plans for next day:** Continue working on the report.
 
-> **Problems/bugs noted:**  
+> **Problems/bugs noted:**  None.
 
-> **Other notes:** 
+> **Other notes:** None.
 
-## TEMPLATE ENDS HERE. MEETINGS START HERE.
-
-******
 
 ### Log for 2021-06-12
+I helped with kindergarten robotics today, so I was absent
 
-I helped with kindergarten robotics.
-
-******
 
 ### Log for 2021-06-13
 
 > **Goals for today:** Edit the report. 
 
-> **Accomplished:** Editing the report, ,making comments in the game code.
+> **Accomplished:** Editing the report, making comments in the game code, reviewing documentation in the game code. 
 
 > **Plans for next day:** Finishing touches
 
-> **Problems/bugs noted:**  none
+> **Problems/bugs noted:**  None
 
-> **Other notes:** none
+> **Other notes:** None
 
-## TEMPLATE ENDS HERE. MEETINGS START HERE.
 
-******
+
+
 
 
 
