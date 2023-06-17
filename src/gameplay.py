@@ -21,7 +21,6 @@ and changes the users icon based of the keys pressed.
 
 
 
-
 def gameplay() -> int:
     #imports
     import random
@@ -54,7 +53,7 @@ def gameplay() -> int:
     app.middley = 330
     app.uperx = 500
     app.upery = 500
-
+# setting the default time
     time = 0
     gtime = 0
     speed = 0 + (gtime * (1.1))
