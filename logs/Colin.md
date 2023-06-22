@@ -98,7 +98,7 @@
 
 > **Problems/bugs noted:** you can stick to the roof if you go high enough
 
-### Log for 2021-06-06
+### Log for 2021-06-07
 
 > **Goals for today:** add some colours and fix some bugs with jumping(if high enough, you will stick to the sealing and not need to play the game)
 
@@ -106,7 +106,7 @@
 
 > **Plans for next day: add sounds
 
-### Log for 2021-06-07
+### Log for 2021-06-08
 
 > **Goals for today:** looked at sounds and phisics
 
